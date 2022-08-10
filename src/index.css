@@ -668,4 +668,11 @@ body{
   .header__right{
     float: right;
   }
+  .banner__button{
+    padding: 0.3rem !important;
+  }
+  .text__main{
+    font-size: 25px;
+    text-align: center;
+  }
 }

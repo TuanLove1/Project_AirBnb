@@ -5,7 +5,7 @@ import '../index.css'
 export const Header = () => {
     return (
         <>
-            <header className='sticky top-0 z-50 grid-wide shadow-md p-4 bg-white'>
+            <header className='sticky top-0 z-50 grid shadow-md p-4 bg-white'>
                 {/* Left */}
                 <div className='row flex items-center '>
                     <div className='col l-3 mf8-3 c-0'>
@@ -41,7 +41,6 @@ export const Header = () => {
                     </div>
                 </div>
             </header>
-          
         </>
     )
 }

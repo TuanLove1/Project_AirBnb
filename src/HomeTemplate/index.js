@@ -1,11 +1,11 @@
 import React from 'react'
 import { Footer } from './Footer'
-import { Header } from './Header'
 import {Outlet} from "react-router-dom"
+import { Home } from '../pages/Home'
 export const HomeTemplate = () => {
   return (
     <div>
-      <Header/>
+      <Home/>
       <Outlet/>
       <Footer/>
     </div>

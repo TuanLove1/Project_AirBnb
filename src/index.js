@@ -9,7 +9,6 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./redux/reducer";
 import thunk from "redux-thunk";
-import 'antd/dist/antd.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
