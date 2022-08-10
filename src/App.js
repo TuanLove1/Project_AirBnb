@@ -8,6 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* RouterHomePlate */}
         <Route path='' element={<HomeTemplate/>}>
           <Route path='home' element={<Home/>} />
           <Route path='about' element={<About/>} />
