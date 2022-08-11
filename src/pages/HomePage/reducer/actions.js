@@ -1,10 +1,10 @@
-import { api } from "../../api/utils";
+import { api } from "../../../api/utils";
 import * as ActionType from "./constants";
 
-export const actFectDataCity = () => {
+export const actFectDataCity = (city ='') => {
     return (dispatch) => {
         dispatch(actFectDataCityRequest())
-        api.get('locations')
+        api.get(`locations?location=${city}`)
         .then((result)=>{
             console.log(result.data);
             dispatch(actFectDataCitySuccess(result.data))

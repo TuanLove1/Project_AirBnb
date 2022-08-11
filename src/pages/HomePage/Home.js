@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { Banner } from '../HomeTemplate/Banner';
-import { Header } from '../HomeTemplate/Header';
+import { Banner } from '../../HomeTemplate/Banner';
+import { Header } from '../../HomeTemplate/Header';
 import { useDispatch, useSelector } from 'react-redux'
 import { actFectDataCity } from './reducer/actions';
 export const Home = () => {
@@ -12,8 +12,8 @@ export const Home = () => {
     
   }, [])
  
+  let { data } = prop;
   const renderHtmlCiTy = () => {
-    let { data } = prop;
     return data?.splice(0, 8).map((city, index) => {
       return <div key={index} className='col l-3 mf8-6 c-12'>
         <div className='all__city flex items-center cursor-pointer rounded-md hover:scale-105 hover:bg-gray-100 m-2 transition-all ease-linear'>

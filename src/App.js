@@ -1,16 +1,16 @@
 import './App.css';
 import './index.css';
-import { BrowserRouter, Route, Routes,Navigate } from "react-router-dom"
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
 import { HomeTemplate } from './HomeTemplate';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
+import { Home } from './pages/HomePage/Home';
+import {ListRoom} from "./pages/ListRoomPage/ListRoom"
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='' element={<HomeTemplate/>}>
-          <Route path='about' element={<About/>} />
+        <Route path='' element={<HomeTemplate />}>
         </Route>
+        <Route path='list-room/:id' element={<ListRoom />} />
       </Routes>
     </BrowserRouter>
   );
