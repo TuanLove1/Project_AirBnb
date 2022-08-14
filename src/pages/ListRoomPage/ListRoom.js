@@ -2,21 +2,27 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Header } from '../../HomeTemplate/Header';
 import { Footer } from '../../HomeTemplate/Footer';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { fectDataRoom } from './reducer/actions';
 import { StarIcon } from '@heroicons/react/solid';
+import { MapBox } from '../../HomeTemplate/MapBox';
+import { ClipLoader } from 'react-spinners';
 export const ListRoom = () => {
   let dispatch = useDispatch()
   let prop = useSelector((state) => state.dataRoomReducer)
   let params = useParams()
+  let navigate = useNavigate()
   useEffect(() => {
     dispatch(fectDataRoom(params.id))
   }, [])
   const renderRoom = () => {
-    const { data } = prop;
+    const { data, loading } = prop;
+    if (loading) return <ClipLoader className='text-red-400' color="#ef7983" />
     return data?.map((room, index) => {
       return <>
-        <div className='row flex  mt-3 '>
+        <div onClick={() => {
+          navigate(`/detail-room/${room._id}`)
+        }} className='row flex cursor-pointer  mt-3 hover:scale-105 hover:shadow-xl transition-all ease-linear '>
           <div key={index} className='col l-4 mf8-4 c-4'>
             <div className='room__img'>
               <img className='w-100 h-100 rounded-xl' src={room.image} />
@@ -26,7 +32,7 @@ export const ListRoom = () => {
             <div className='room__info'>
               <div className='flex justify-between'>
                 <p>Toàn bộ căn hộ dịch vụ tại {room.locationId.province}</p>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer hover:text-red-400 transition-all ease-linear" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
 
@@ -72,7 +78,7 @@ export const ListRoom = () => {
             </div>
           </div>
           <div className='col l-5 mf8-5 c-0'>
-
+            <MapBox />
           </div>
         </div>
       </div>

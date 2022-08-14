@@ -667,9 +667,10 @@ body {
 
 .searchInput {
   margin-top: 10px;
-  width: 350px;
+  width: 300px;
   height: 100px;
-  position: fixed;
+  position: sticky;
+  z-index: 999999;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
@@ -713,5 +714,8 @@ body {
   }
   .buttonRoom {
     font-size: 15px;
+  }
+  .detail__rating{
+    font-size: 10px;
   }
 }

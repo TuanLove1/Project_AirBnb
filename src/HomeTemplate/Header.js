@@ -9,29 +9,65 @@ export const Header = () => {
     let prop = useSelector((state) => state.dataCiTyReducer)
     let dispatch = useDispatch();
     const [searchInput, setSearchInput] = useState('');
+    const [modalUser, setModalUser] = useState(false);
+    const [modalLoginUser, setModalLoginUser] = useState(false);
+    
     let navigate = useNavigate()
     // let params = useParams();
     // console.log(params.id);
     const renderInput = () => {
         return prop.data?.map((city, index) => {
-            return <div key={index} className='adress flex items-center my-2 ml-1 cursor-pointer hover:bg-gray-100 rounded-md transition-all ease-linear'>
+            return <div onClick={() => {
+                navigate(`/list-room/${city._id}`)
+                dispatch(fectDataRoom(city._id))
+            }} key={index} className='adress flex items-center my-2 ml-1 cursor-pointer hover:bg-gray-100  hover:scale-105 hover:shadow-xlrounded-md transition-all ease-linear'>
                 <div className='w-8 h-8 mr-2 bg-gray-200 rounded-md p-2'>
                     <LocationMarkerIcon />
                 </div>
-                <div onClick={() => {
-                    navigate(`/list-room/${city._id}`)
-                    dispatch(fectDataRoom(city._id))
-                }} className='adress__text'>
-                    <p>{city.name},{city.province}</p>
+                <div className='adress__text'>
+                    <p >{city.name},{city.province}</p>
                 </div>
             </div>
         })
     }
-
+    const renderModalUser = () => {
+        return <div className='border-2 rounded-xl shadow-xl mt-5 bg-slate-50 p-2 fixed top-7 right-10'>
+            <h1 onClick={()=>{
+                navigate('/register')
+            }} className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Đăng ký</h1>
+            <hr />
+            <h1 onClick={() => {
+                navigate('/login')
+            }} className='p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Đăng nhập</h1>
+            <hr />
+            <div className='my-3'>
+                <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear mb-2 ml-2'>Tổ chức trải nghiệm</h1>
+                <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear ml-2'>Trợ giúp ??</h1>
+            </div>
+        </div>
+    }
+    let user = JSON.parse(localStorage.getItem('user'))
+    console.log(user);
+    const renderModalLoginUser = () => {
+        return <div className='border-2 rounded-xl shadow-xl mt-5 bg-slate-50 p-2 fixed top-7 right-10'>
+            <h1 className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Xin chào, {user.name}</h1>
+            <hr />
+            <div className='my-3'>
+                <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear mb-2 ml-2'>Tổ chức trải nghiệm</h1>
+                <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear ml-2'>Trợ giúp ??</h1>
+            </div>
+            <hr/>
+            <h1 onClick={()=>{
+                localStorage.removeItem('user')
+                localStorage.removeItem('token')
+            }} className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Đăng xuất</h1>
+        </div>
+    }
     const handelonChange = (e) => {
         dispatch(actFectDataCity(e.target.value))
         setSearchInput(e.target.value)
     }
+
     return (
         <>
             <header className='sticky top-0 z-50 grid shadow-md p-4 bg-white'>
@@ -64,10 +100,18 @@ export const Header = () => {
                         <div className='flex items-center header__right '>
                             <p className='mr-3 mb-0 cursor-pointer comehouse__mobile hover:bg-gray-100 rounded-full p-2 transition-all ease-linear '>Trở thành chủ nhà</p>
                             <GlobeAltIcon className='h-6 mr-3 cursor-pointer hover:shadow-2xl hover:bg-gray-400 hover:text-white rounded-full  transition-all ease-linear' />
-                            <div className='flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>
+                            {user ? <div onClick={() => { setModalLoginUser(!modalLoginUser) }} className=' relative flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>
+                                <MenuIcon className='h-6 mr-1' />
+                                <img className='w-6 h-6 rounded-full' src={user?.avatar || 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'} />
+                                {modalLoginUser && renderModalLoginUser()}
+
+                            </div> : <div onClick={() => { setModalUser(!modalUser) }} className=' relative flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>
                                 <MenuIcon className='h-6 mr-1' />
                                 <UserCircleIcon className='h-6 text-gray-500' />
-                            </div>
+                                {modalUser && renderModalUser()}
+                            </div>}
+
+
                         </div>
                     </div>
                     <div className='grid wide'>

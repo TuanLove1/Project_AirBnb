@@ -9,6 +9,9 @@ api.interceptors.request.use(
       config.headers = {
         ...config.headers,
         tokenByClass: TOKEN_CYBERSOFT,
+        token: localStorage.getItem("token")
+        ? JSON.parse(localStorage.getItem("token"))
+        : "",
       };
       return config;
     },

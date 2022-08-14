@@ -1,0 +1,3 @@
+export const DETAIL_ROOM_REQUEST = 'reducer/DETAIL_ROOM_REQUEST';
+export const DETAIL_ROOM_SUCCESS = 'reducer/DETAIL_ROOM_SUCCESS';
+export const DETAIL_ROOM_FAILED = 'reducer/DETAIL_ROOM_FAILED';

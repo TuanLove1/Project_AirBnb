@@ -1,0 +1,3 @@
+export const LOGIN_AIRBNB_REQUEST = 'reducer/LOGIN_AIRBNB_REQUEST';
+export const LOGIN_AIRBNB_SUCCESS = 'reducer/LOGIN_AIRBNB_SUCCESS';
+export const LOGIN_AIRBNB_FAILED = 'reducer/LOGIN_AIRBNB_FAILED';
