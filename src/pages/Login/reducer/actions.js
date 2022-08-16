@@ -7,7 +7,6 @@ export const actLoginAirBnb = (account, navigate) => {
         dispatch(actLoginAirBnbRequest())
         api.post('auth/login', account)
             .then((result) => {
-                console.log(result.data);
                 dispatch(actLoginAirBnbSuccess(result.data))
                 localStorage.setItem('token', JSON.stringify(result.data.token))
                 localStorage.setItem('user', JSON.stringify(result.data.user))
@@ -20,7 +19,6 @@ export const actLoginAirBnb = (account, navigate) => {
                 navigate('/')
             })
             .catch((error) => {
-                console.log(error);
                 dispatch(actLoginAirBnbFailed(error))
             })
     }

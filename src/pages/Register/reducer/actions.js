@@ -1,13 +1,12 @@
 import { api } from "../../../api/utils";
 import * as ActionType from "./constants";
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import withReactContent from 'sweetalert2-react-content';
 export const actRegisterAirBnb = (account, navigate) => {
     return (dispatch) => {
         dispatch(actRegisterAirBnbRequest())
         api.post('auth/register', account)
             .then((result) => {
-                console.log(result.data);
                 dispatch(actRegisterAirBnbSuccess(result.data))
                 const MySwal = withReactContent(Swal)
                 MySwal.fire({
@@ -18,7 +17,6 @@ export const actRegisterAirBnb = (account, navigate) => {
                 navigate('/login')
             })
             .catch((error) => {
-                console.log(error);
                 dispatch(actRegisterAirBnbFailed(error))
             })
     }

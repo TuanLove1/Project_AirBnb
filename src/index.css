@@ -671,11 +671,11 @@ body {
   height: 100px;
   position: sticky;
   z-index: 999999;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   border-radius: 20px;
   overflow-y: auto;
 }
+
 
 .buttonRoom {
   margin-top: 10px;

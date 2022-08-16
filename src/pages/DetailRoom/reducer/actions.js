@@ -6,11 +6,9 @@ export const actFectDetailRoom = (id) => {
         dispatch(actFectDetailRoomRequest())
         api.get(`rooms/${id}`)
         .then((result)=>{
-            console.log(result.data);
             dispatch(actFectDetailRoomSuccess(result.data))
         })
         .catch((error)=>{
-            console.log(error);
             dispatch(actFectDetailRoomFailed(error))
         })
     }

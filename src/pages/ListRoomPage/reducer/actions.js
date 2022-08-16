@@ -6,11 +6,9 @@ export const fectDataRoom = (id) => {
         dispatch(actFectDataRoomRequest());
         api.get(`rooms?locationId=${id}`)
         .then((result)=>{
-            console.log(result.data);
             dispatch(actFectDataRoomSuccess(result.data))
         })
         .catch((error)=>{
-            console.log(error);
             dispatch(actFectDataRoomFailed(error))
         })
     }

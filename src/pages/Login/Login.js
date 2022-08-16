@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { ClipLoader } from 'react-spinners'
 import { Footer } from '../../HomeTemplate/Footer'
 import { Header } from '../../HomeTemplate/Header'
 import { actLoginAirBnb } from './reducer/actions'
@@ -11,8 +12,8 @@ export const Login = () => {
         email: '',
         password: '',
     });
+    const { loading } = useSelector((state) => state.loginAirBnbReducer)
     let navigate = useNavigate()
-    console.log(state);
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(actLoginAirBnb(state, navigate))
@@ -28,8 +29,11 @@ export const Login = () => {
         return <Navigate replace to="/" />;
     return (
         <div>
+            {loading ? <div style={{ backgroundColor: 'rgba(0,0,0,.5)', height: '100%', width: '100%', position: 'fixed', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '999' }} className=''>
+                <ClipLoader color='rgb(248 113 113)' />
+            </div> : ''}
             <Header />
-            <div style={{ backgroundImage: `url('https://blog.atairbnb.com/wp-content/uploads/2015/09/SummerTravelHeader-1600x900.001.jpg?fit=1600%2C900')`, backgroundSize: 'cover', padding: '50px',backgroundPosition:'center' }} className=''>
+            <div style={{ backgroundImage: `url('https://blog.atairbnb.com/wp-content/uploads/2015/09/SummerTravelHeader-1600x900.001.jpg?fit=1600%2C900')`, backgroundSize: 'cover', padding: '50px', backgroundPosition: 'center' }} className=''>
                 <form onSubmit={handleSubmit} className='border-2 bg-gray-100 w-96 mx-auto p-10 rounded-xl shadow-xl '>
                     <h1 className='text-center font-bold text-2xl mb-3 text-red-400'>Đăng nhập</h1>
                     <div className="form-group w-80 mx-auto">

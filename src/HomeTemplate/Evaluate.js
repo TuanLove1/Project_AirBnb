@@ -2,8 +2,9 @@ import { StarIcon } from '@heroicons/react/solid'
 import React, { useEffect, useState } from 'react'
 import { api } from '../api/utils'
 import Moment from 'react-moment';
+import { Comment } from '../pages/Comment/Comment';
 export const Evaluate = (props) => {
-    const [datas,setData] = useState([]);
+    const [datas, setData] = useState([]);
     useEffect(() => {
         api.get(`reviews/byRoom?roomId=${props.params.id}`)
             .then((result) => {
@@ -26,16 +27,17 @@ export const Evaluate = (props) => {
                     </div>
                 </div>
                 <p className='font-bold'>{comment.content}</p>
-                <div className='w-20 h-1 bg-gray-200 mx-auto mt-3'/>
+                <div className='w-20 h-1 bg-gray-200 mx-auto mt-3' />
             </div>
         })
     }
     return (
         <>
-            <div className='grid wide'>
+            <div className='grid wide mb-5'>
                 <div className='flex items-center font-bold mb-3'>
                     <StarIcon className='w-6 h-6 text-red-400 mr-2' /><h1>4,83(18 đánh giá)</h1>
                 </div>
+                {(localStorage.getItem("user"))?<Comment dataId={props}/>:''}
                 <div className='row'>
                     {renderComment()}
                 </div>

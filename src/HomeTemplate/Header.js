@@ -3,18 +3,18 @@ import { NavLink, useParams, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon, LocationMarkerIcon } from "@heroicons/react/solid"
 import '../index.css'
-import { actFectDataCity } from '../pages/HomePage/reducer/actions'
+
 import { fectDataRoom } from '../pages/ListRoomPage/reducer/actions'
+import { actFectDataCityInput } from '../pages/SearchInput/reducer/actions'
 export const Header = () => {
-    let prop = useSelector((state) => state.dataCiTyReducer)
+    // let prop = []
+    let prop = useSelector((state) => state.dataCiTyInputReducer)
     let dispatch = useDispatch();
     const [searchInput, setSearchInput] = useState('');
     const [modalUser, setModalUser] = useState(false);
     const [modalLoginUser, setModalLoginUser] = useState(false);
-    
+
     let navigate = useNavigate()
-    // let params = useParams();
-    // console.log(params.id);
     const renderInput = () => {
         return prop.data?.map((city, index) => {
             return <div onClick={() => {
@@ -32,7 +32,7 @@ export const Header = () => {
     }
     const renderModalUser = () => {
         return <div className='border-2 rounded-xl shadow-xl mt-5 bg-slate-50 p-2 fixed top-7 right-10'>
-            <h1 onClick={()=>{
+            <h1 onClick={() => {
                 navigate('/register')
             }} className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Đăng ký</h1>
             <hr />
@@ -47,7 +47,6 @@ export const Header = () => {
         </div>
     }
     let user = JSON.parse(localStorage.getItem('user'))
-    console.log(user);
     const renderModalLoginUser = () => {
         return <div className='border-2 rounded-xl shadow-xl mt-5 bg-slate-50 p-2 fixed top-7 right-10'>
             <h1 className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Xin chào, {user.name}</h1>
@@ -56,21 +55,21 @@ export const Header = () => {
                 <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear mb-2 ml-2'>Tổ chức trải nghiệm</h1>
                 <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear ml-2'>Trợ giúp ??</h1>
             </div>
-            <hr/>
-            <h1 onClick={()=>{
+            <hr />
+            <h1 onClick={() => {
                 localStorage.removeItem('user')
                 localStorage.removeItem('token')
             }} className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Đăng xuất</h1>
         </div>
     }
     const handelonChange = (e) => {
-        dispatch(actFectDataCity(e.target.value))
+        dispatch(actFectDataCityInput(e.target.value))
         setSearchInput(e.target.value)
     }
 
     return (
         <>
-            <header className='sticky top-0 z-50 grid shadow-md p-4 bg-white'>
+            <header className='sticky top-0 z-40 grid shadow-md p-4 bg-white'>
                 {/* Left */}
                 <div className='row flex items-center '>
                     <div className='col l-3 mf8-3 c-0'>
@@ -94,6 +93,15 @@ export const Header = () => {
                             <input value={searchInput} onChange={handelonChange} className='placeholder-gray-400 text-gray-400 outline-none pl-5 bg-transparent search__mobile' type='text' placeholder='Bạn sắp đi đâu ?' />
                             <SearchIcon className='h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer' />
                         </div>
+                        <div className='grid wide'>
+                            <div className='row'>
+                                {searchInput &&
+                                    <div className='col l-6 mf8-6 c-12 mx-auto bg-white searchInput '>
+                                        {renderInput()}
+                                    </div>
+                                }
+                            </div>
+                        </div>
                     </div>
                     {/* Right */}
                     <div className='col l-3 mf8-3 c-0'>
@@ -114,15 +122,7 @@ export const Header = () => {
 
                         </div>
                     </div>
-                    <div className='grid wide'>
-                        <div className='row'>
-                            {searchInput &&
-                                <div className='col l-6 mf8-6 c-12 mx-auto bg-white searchInput '>
-                                    {renderInput()}
-                                </div>
-                            }
-                        </div>
-                    </div>
+
                 </div>
             </header>
         </>
