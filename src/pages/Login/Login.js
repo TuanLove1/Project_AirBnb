@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { ClipLoader } from 'react-spinners'
-import { Footer } from '../../HomeTemplate/Footer'
-import { Header } from '../../HomeTemplate/Header'
+import { Footer } from '../../templates/HomeTemplate/Footer'
+import { Header } from '../../templates/HomeTemplate/Header'
 import { actLoginAirBnb } from './reducer/actions'
 
 export const Login = () => {
@@ -12,7 +12,7 @@ export const Login = () => {
         email: '',
         password: '',
     });
-    const { loading } = useSelector((state) => state.loginAirBnbReducer)
+    const { loading,error } = useSelector((state) => state.loginAirBnbReducer)
     let navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,6 +25,10 @@ export const Login = () => {
             [name]: value,
         });
     };
+    const renderNoti = () => {
+       return  error &&<div className='text-danger text-sm mb-2'> Mật khẩu hoặc tài khoản không chính xác!</div>
+                 
+    }
     if (localStorage.getItem("user"))
         return <Navigate replace to="/" />;
     return (
@@ -44,6 +48,7 @@ export const Login = () => {
                         <label htmlFor="pwd">Mật khẩu</label>
                         <input name='password' onChange={handleOnchange} className="form-control" type="password" id="pwd" />
                     </div>
+                    {renderNoti()}
                     <div>
                         <button className='bg-red-400 w-full rounded-xl text-white mb-2 p-2'>Login</button>
                     </div>

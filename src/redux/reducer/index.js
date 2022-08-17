@@ -4,11 +4,11 @@ import dataRoomReducer from "../../pages/ListRoomPage/reducer"
 import detailRoomReducer from "../../pages/DetailRoom/reducer"; 
 import loginAirBnbReducer from "../../pages/Login/reducer";
 import registerAirBnbReducer from "../../pages/Register/reducer";
-import dataCiTyInputReducer from "../../pages/SearchInput/reducer";
-import commentReducer from "../../pages/Comment/reducer";
+import dataCiTyInputReducer from "../../components/SearchInput/reducer";
+import commentReducer from "../../components/Comment/reducer/";
 const rootReducer = combineReducers({
-    dataCiTyInputReducer,
     dataCiTyReducer,
+    dataCiTyInputReducer:dataCiTyInputReducer,
     dataRoomReducer,
     detailRoomReducer,
     loginAirBnbReducer,

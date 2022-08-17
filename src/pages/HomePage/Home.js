@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { Banner } from '../../HomeTemplate/Banner';
-import { Header } from '../../HomeTemplate/Header';
+import { Banner } from '../../templates/HomeTemplate/Banner';
 import { useDispatch, useSelector } from 'react-redux'
 import { actFectDataCity } from './reducer/actions';
 import ClipLoader from "react-spinners/ClipLoader";
@@ -10,7 +9,7 @@ export const Home = () => {
   let prop = useSelector((state) => state.dataCiTyReducer);
   useEffect(() => {
     dispatch(actFectDataCity())
-  }, [])
+  },[])
 
   let { data, loading } = prop;
   const renderHtmlCiTy = () => {
@@ -31,7 +30,7 @@ export const Home = () => {
   }
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Banner />
       <>
         <section>

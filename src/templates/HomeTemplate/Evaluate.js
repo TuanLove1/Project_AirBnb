@@ -1,19 +1,25 @@
 import { StarIcon } from '@heroicons/react/solid'
 import React, { useEffect, useState } from 'react'
-import { api } from '../api/utils'
+import { api } from '../../api/utils'
 import Moment from 'react-moment';
-import { Comment } from '../pages/Comment/Comment';
+import { Comment } from '../../components/Comment/Comment';
+import { ClipLoader } from 'react-spinners';
 export const Evaluate = (props) => {
+    console.log(props.params.id);
     const [datas, setData] = useState([]);
+    const [limit, setLimit] = useState(4);
     useEffect(() => {
-        api.get(`reviews/byRoom?roomId=${props.params.id}`)
+        api.get(`reviews/byRoom?roomId=${props.params.id}&limit=${limit}`)
             .then((result) => {
                 setData(result.data);
             })
             .catch((error) => {
                 console.log(error);
             })
-    }, [])
+    }, [limit])
+    const renderLimit = () => {
+        setLimit(limit + 4)
+    }
     const renderComment = () => {
         return datas?.map((comment, index) => {
             return <div key={index} className='col l-6 mf8-6 c-12'>
@@ -37,9 +43,12 @@ export const Evaluate = (props) => {
                 <div className='flex items-center font-bold mb-3'>
                     <StarIcon className='w-6 h-6 text-red-400 mr-2' /><h1>4,83(18 đánh giá)</h1>
                 </div>
-                {(localStorage.getItem("user"))?<Comment dataId={props}/>:''}
+                {(localStorage.getItem("user")) ? <Comment  dataId={props} /> : ''}
                 <div className='row'>
                     {renderComment()}
+                    <div className='mx-auto mt-2'>
+                        <button onClick={renderLimit} className='bg-red-400 rounded-md p-1 text-white'>Đọc thêm</button>
+                    </div>
                 </div>
             </div>
         </>

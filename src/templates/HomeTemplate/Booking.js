@@ -2,7 +2,7 @@ import { StarIcon } from '@heroicons/react/solid'
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { api } from '../api/utils'
+import { api } from '../../api/utils'
 
 export const Booking = (props) => {
     const [state, setState] = useState({

@@ -3,10 +3,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { ClipLoader } from 'react-spinners'
-import { Booking } from '../../HomeTemplate/Booking'
-import { Evaluate } from '../../HomeTemplate/Evaluate'
-import { Footer } from '../../HomeTemplate/Footer'
-import { Header } from '../../HomeTemplate/Header'
+import { Booking } from '../../templates/HomeTemplate/Booking'
+import { Evaluate } from '../../templates/HomeTemplate/Evaluate'
 import { actFectDetailRoom } from './reducer/actions'
 
 export const DetailRoom = () => {
@@ -20,7 +18,7 @@ export const DetailRoom = () => {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             {loading ?
                 <div className='grid wide'>
                     <ClipLoader className='text-red-400' color="#ef7983" />
@@ -143,7 +141,7 @@ export const DetailRoom = () => {
                     <hr className='my-3' />
                 </div>}
             <Evaluate params={params} />
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

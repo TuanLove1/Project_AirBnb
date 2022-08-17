@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Header } from '../../HomeTemplate/Header';
-import { Footer } from '../../HomeTemplate/Footer';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fectDataRoom } from './reducer/actions';
 import { StarIcon } from '@heroicons/react/solid';
-import { MapBox } from '../../HomeTemplate/MapBox';
+import { MapBox } from '../../templates/HomeTemplate/MapBox';
 import { ClipLoader } from 'react-spinners';
 export const ListRoom = () => {
   let dispatch = useDispatch()
@@ -56,7 +54,7 @@ export const ListRoom = () => {
   }
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='grid wide'>
         <div className='row'>
           <div className='col l-7 mf8-7 c-12'>
@@ -82,7 +80,7 @@ export const ListRoom = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

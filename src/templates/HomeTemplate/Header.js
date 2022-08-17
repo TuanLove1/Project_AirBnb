@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { NavLink, useParams, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from "react-redux"
 import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon, LocationMarkerIcon } from "@heroicons/react/solid"
-import '../index.css'
+import '../../../src/index.css'
 
-import { fectDataRoom } from '../pages/ListRoomPage/reducer/actions'
-import { actFectDataCityInput } from '../pages/SearchInput/reducer/actions'
+import { fectDataRoom } from '../../pages/ListRoomPage/reducer/actions'
+import { actFectDataCityInput } from '../../components/SearchInput/reducer/actions'
 export const Header = () => {
     // let prop = []
     let prop = useSelector((state) => state.dataCiTyInputReducer)
@@ -93,14 +93,12 @@ export const Header = () => {
                             <input value={searchInput} onChange={handelonChange} className='placeholder-gray-400 text-gray-400 outline-none pl-5 bg-transparent search__mobile' type='text' placeholder='Bạn sắp đi đâu ?' />
                             <SearchIcon className='h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer' />
                         </div>
-                        <div className='grid wide'>
-                            <div className='row'>
-                                {searchInput &&
-                                    <div className='col l-6 mf8-6 c-12 mx-auto bg-white searchInput '>
-                                        {renderInput()}
-                                    </div>
-                                }
-                            </div>
+                        <div >
+                            {searchInput &&
+                                <div className='mx-auto bg-white searchInput '>
+                                    {renderInput()}
+                                </div>
+                            }
                         </div>
                     </div>
                     {/* Right */}
