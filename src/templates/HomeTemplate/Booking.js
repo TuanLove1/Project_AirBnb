@@ -1,43 +1,56 @@
 import { StarIcon } from '@heroicons/react/solid'
 import React, { useState } from 'react'
+import {useNavigate} from "react-router-dom"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { api } from '../../api/utils'
 
 export const Booking = (props) => {
+    const navigate = useNavigate()
     const [state, setState] = useState({
         roomId: props.params.id,
         checkIn: '',
         checkOut: '',
     })
     const handleOnchange = (e) => {
-        const {name,value} = e.target
+        const { name, value } = e.target
         setState({
             ...state,
-            [name]:value
+            [name]: value
         });
     }
     const bookRoom = (book) => {
-        api.post('rooms/booking',book)
-        .then((result)=>{
-            const MySwal = withReactContent(Swal)
-            MySwal.fire({
-                title: <strong>{result.data.message}</strong>,
-                html: <i>You clicked the button!</i>,
-                icon: 'success'
+        api.post('rooms/booking', book)
+            .then((result) => {
+                const MySwal = withReactContent(Swal)
+                MySwal.fire({
+                    title: <strong>{result.data.message}</strong>,
+                    html: <i>You clicked the button!</i>,
+                    icon: 'success'
+                })
             })
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
+            .catch((error) => {
+                console.log(error);
+            })
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        bookRoom(state)
+        if (localStorage.getItem('user')) {
+            bookRoom(state)
+        }
+        else{
+            const MySwal = withReactContent(Swal)
+            MySwal.fire({
+                title: <strong>Bạn chưa đăng nhập</strong>,
+                html: <i>You clicked the button!</i>,
+                icon: 'error'
+            })
+            navigate('/login')
+        }
     }
     console.log(state);
     return (
-        <form onSubmit={handleSubmit} className='border-2 rounded-xl shadow-xl mt-5 '>
+        <form onSubmit={handleSubmit} className='border-2 rounded-xl shadow-xl mt-5 hover:scale-105 transition ease-linear cursor-pointer '>
             <div className='mx-4 p-4'>
                 <div className='flex justify-between items-center mb-3'>
                     <div className='font-bold'>{props.data?.price}$/ đêm</div>
@@ -63,12 +76,12 @@ export const Booking = (props) => {
                     </div>
 
                 </div>
-                <div className='booking__button bg-red-400 text-white text-center rounded-xl p-2 mb-3'>
+                <div className='booking__button btn-76 bg-red-400 text-white text-center rounded-xl p-2 mb-3'>
                     <button >Đặt phòng</button>
                 </div>
                 <div className='flex justify-between p mb-3'>
                     <div className=''>
-                    {props.data?.price}$ x 5
+                        {props.data?.price}$ x 5
                     </div>
                     <div className=''>
                         $221

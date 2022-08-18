@@ -101,7 +101,6 @@ export const Register = () => {
             {loading ? <div style={{ backgroundColor: 'rgba(0,0,0,.5)', height: '100%', width: '100%', position: 'fixed', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '999' }} className=''>
                 <ClipLoader color='rgb(248 113 113)' />
             </div> : ''}
-            <Header />
             <div style={{ backgroundImage: `url('https://blog.atairbnb.com/wp-content/uploads/2015/09/SummerTravelHeader-1600x900.001.jpg?fit=1600%2C900')`, backgroundSize: 'cover', padding: '50px' }} className=''>
 
                 <form onSubmit={handleSubmit} className='border-2  bg-gray-100  w-96 mx-auto p-10 rounded-xl shadow-xl hover:border-black transition ease-linear cursor-pointer'>
@@ -144,11 +143,10 @@ export const Register = () => {
                         <p className='text-danger'>{state.error.address}</p>
                     </div>
                     <div>
-                        <button className='bg-red-400 w-full rounded-xl text-white mb-2 p-2'>Đăng ký</button>
+                        <button className='btn-76 bg-red-400 w-full rounded-xl text-white mb-2 p-2'>Đăng ký</button>
                     </div>
                 </form>
             </div>
-            <Footer />
         </div >
     )
 }

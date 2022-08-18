@@ -8,10 +8,13 @@ export const Evaluate = (props) => {
     console.log(props.params.id);
     const [datas, setData] = useState([]);
     const [limit, setLimit] = useState(4);
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
+        setLoading(true);
         api.get(`reviews/byRoom?roomId=${props.params.id}&limit=${limit}`)
             .then((result) => {
                 setData(result.data);
+                setLoading(false);
             })
             .catch((error) => {
                 console.log(error);
@@ -37,13 +40,15 @@ export const Evaluate = (props) => {
             </div>
         })
     }
+    if (loading) return <div className='text-center'><ClipLoader className='text-red-400' color="#ef7983" /></div>
+
     return (
         <>
             <div className='grid wide mb-5'>
                 <div className='flex items-center font-bold mb-3'>
                     <StarIcon className='w-6 h-6 text-red-400 mr-2' /><h1>4,83(18 đánh giá)</h1>
                 </div>
-                {(localStorage.getItem("user")) ? <Comment  dataId={props} /> : ''}
+                {(localStorage.getItem("user")) ? <Comment dataId={props} /> : ''}
                 <div className='row'>
                     {renderComment()}
                     <div className='mx-auto mt-2'>

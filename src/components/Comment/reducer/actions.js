@@ -3,7 +3,7 @@ import * as ActionType from "./constants";
 
 export const actComment = (id,comment) => {
     return (dispatch) => {
-        dispatch(actCommentRequest)
+        dispatch(actCommentRequest())
         api.post(`reviews?roomId=${id}`,comment)
         .then((result)=>{
             dispatch(actCommentSuccess(result.data))

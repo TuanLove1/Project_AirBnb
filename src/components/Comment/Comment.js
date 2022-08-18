@@ -14,6 +14,7 @@ export const Comment = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(actComment(props.dataId.params.id, comment))
+        console.log(prop.loading);
     }
 
     const handleOnChange = (e) => {
@@ -24,6 +25,7 @@ export const Comment = (props) => {
         })
     }
     console.log(comment);
+
     return (
         <>
             {/* {loading ? <div style={{ backgroundColor: 'rgba(0,0,0,.5)', height: '100%', width: '100%', position: 'fixed', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '999' }} className=''>

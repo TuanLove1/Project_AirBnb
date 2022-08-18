@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fectDataRoom } from './reducer/actions';
@@ -6,15 +6,15 @@ import { StarIcon } from '@heroicons/react/solid';
 import { MapBox } from '../../templates/HomeTemplate/MapBox';
 import { ClipLoader } from 'react-spinners';
 export const ListRoom = () => {
-  let dispatch = useDispatch()
-  let prop = useSelector((state) => state.dataRoomReducer)
-  let params = useParams()
-  let navigate = useNavigate()
+  const dispatch = useDispatch()
+  const prop = useSelector((state) => state.dataRoomReducer)
+  const params = useParams()
+  const navigate = useNavigate()
   useEffect(() => {
     dispatch(fectDataRoom(params.id))
   }, [])
+  const { data, loading } = prop;
   const renderRoom = () => {
-    const { data, loading } = prop;
     if (loading) return <ClipLoader className='text-red-400' color="#ef7983" />
     return data?.map((room, index) => {
       return <>
@@ -55,6 +55,7 @@ export const ListRoom = () => {
   return (
     <>
       {/* <Header /> */}
+  
       <div className='grid wide'>
         <div className='row'>
           <div className='col l-7 mf8-7 c-12'>

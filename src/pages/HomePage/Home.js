@@ -3,43 +3,33 @@ import { Banner } from '../../templates/HomeTemplate/Banner';
 import { useDispatch, useSelector } from 'react-redux'
 import { actFectDataCity } from './reducer/actions';
 import ClipLoader from "react-spinners/ClipLoader";
+import SlickCarousel from "../../components/SlickCarousel/SlickeCarousel"
 export const Home = () => {
   let dispatch = useDispatch();
   // let prop = []
   let prop = useSelector((state) => state.dataCiTyReducer);
   useEffect(() => {
     dispatch(actFectDataCity())
-  },[])
+  }, [])
 
   let { data, loading } = prop;
-  const renderHtmlCiTy = () => {
-    if (loading) return <ClipLoader className='text-red-400' color="#ef7983" />
-    return data?.splice(0,8).map((city, index) => {
-      return <div key={index} className='col l-3 mf8-6 c-12'>
-        <div className='all__city flex items-center cursor-pointer rounded-md hover:scale-105 hover:bg-gray-100 m-2 transition-all ease-linear'>
-          <div className='mr-2 img__city'>
-            <img className='rounded w-10 h-10' src={city.image} />
-          </div>
-          <div className='text__city'>
-            <h4 className='font-bold'>{city.province}</h4>
-            <span className='text-gray-500'>{city.valueate} giờ lái xe</span>
-          </div>
-        </div>
-      </div>
-    })
-  }
+
   return (
     <>
+      {loading ? <div style={{ backgroundColor: 'rgba(0,0,0,.5)', height: '100%', width: '100%', position: 'fixed', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '999' }} className=''>
+        <ClipLoader color='rgb(248 113 113)' />
+      </div> : ''}
       {/* <Header /> */}
       <Banner />
       <>
+
         <section>
           <div className='grid wide'>
             <h1 className='text-3xl font-semibold pb-5 pt-5 text__main ml-2'>Khám phá những điểm đến gần đây</h1>
           </div>
           <div className='grid wide'>
             <div className='row'>
-              {renderHtmlCiTy()}
+              {loading ? <ClipLoader color='rgb(248 113 113)' /> : <SlickCarousel data={data} loading={loading} />}
             </div>
           </div>
         </section>

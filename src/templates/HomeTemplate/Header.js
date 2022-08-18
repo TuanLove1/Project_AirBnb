@@ -69,7 +69,7 @@ export const Header = () => {
 
     return (
         <>
-            <header className='sticky top-0 z-40 grid shadow-md p-4 bg-white'>
+            <header className='sticky top-0 z-40 grid shadow-md p-4 bg-white z-10'>
                 {/* Left */}
                 <div className='row flex items-center '>
                     <div className='col l-3 mf8-3 c-0'>
