@@ -4,17 +4,14 @@ import { ClipLoader } from 'react-spinners';
 import { actComment } from './reducer/actions';
 export const Comment = (props) => {
     let avatar = JSON.parse(localStorage.getItem('user'))
-    console.log(props.dataId.params.id);
     const dispatch = useDispatch();
     const prop = useSelector((state) => state.commentReducer)
-    console.log(prop);
     const [comment, setComment] = useState({
         content: ''
     })
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleOnClick = (e) => {
         dispatch(actComment(props.dataId.params.id, comment))
-        console.log(prop.loading);
+        setComment("")
     }
 
     const handleOnChange = (e) => {
@@ -24,14 +21,13 @@ export const Comment = (props) => {
             [id]: value,
         })
     }
-    console.log(comment);
 
     return (
         <>
             {/* {loading ? <div style={{ backgroundColor: 'rgba(0,0,0,.5)', height: '100%', width: '100%', position: 'fixed', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '999' }} className=''>
                 <ClipLoader color='rgb(248 113 113)' />
             </div> : ''} */}
-            <form onSubmit={handleSubmit} className='grid wide mb-4'>
+            <div  className='grid wide mb-4'>
                 <div className='row'>
                     <div className='col l-10 mf8-10 c-12'>
                         <div className='flex my-2'>
@@ -57,11 +53,11 @@ export const Comment = (props) => {
                             </div>
                         </div>
                         <div className='text-right'>
-                            <button className='text-right bg-red-400 text-white rounded-md p-1'>Bình luận</button>
+                            <button onClick={handleOnClick}  className='text-right bg-red-400 text-white rounded-md p-1'>Bình luận</button>
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
         </>
     )
 }

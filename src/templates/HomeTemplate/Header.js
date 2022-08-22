@@ -13,11 +13,13 @@ export const Header = () => {
     const [searchInput, setSearchInput] = useState('');
     const [modalUser, setModalUser] = useState(false);
     const [modalLoginUser, setModalLoginUser] = useState(false);
-
-    let navigate = useNavigate()
+    let user = JSON.parse(localStorage.getItem('user'))
+    console.log(user);
+    let navigate = useNavigate();
     const renderInput = () => {
         return prop.data?.map((city, index) => {
             return <div onClick={() => {
+                setSearchInput('')
                 navigate(`/list-room/${city._id}`)
                 dispatch(fectDataRoom(city._id))
             }} key={index} className='adress flex items-center my-2 ml-1 cursor-pointer hover:bg-gray-100  hover:scale-105 hover:shadow-xlrounded-md transition-all ease-linear'>
@@ -46,7 +48,7 @@ export const Header = () => {
             </div>
         </div>
     }
-    let user = JSON.parse(localStorage.getItem('user'))
+    
     const renderModalLoginUser = () => {
         return <div className='border-2 rounded-xl shadow-xl mt-5 bg-slate-50 p-2 fixed top-7 right-10'>
             <h1 className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Xin chào, {user.name}</h1>
@@ -56,6 +58,9 @@ export const Header = () => {
                 <h1 className='font-mono hover:bg-gray-300 rounded-md transition-all ease-linear ml-2'>Trợ giúp ??</h1>
             </div>
             <hr />
+            <h1 onClick={() => {
+                navigate(`information/${user._id}`)
+            }} className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Thông tin cá nhân</h1>
             <h1 onClick={() => {
                 localStorage.removeItem('user')
                 localStorage.removeItem('token')
@@ -81,7 +86,7 @@ export const Header = () => {
                     </div>
                     {/* Middle */}
                     <div className='col l-6 mf8-6 c-12'>
-                        <div className='flex items-center border-2 rounded-full py-2  justify-between px-3 m-auto w-1/2 header__middle hover:shadow-md transition-all ease-linear'>
+                        <form className='flex items-center border-2 rounded-full py-2  justify-between px-3 m-auto w-1/2 header__middle hover:shadow-md transition-all ease-linear'>
                             {/* <ul className='bg-red-500 flex'>
                             <li className='mr-1'>
                                 <NavLink to='home'>Home</NavLink>
@@ -92,7 +97,7 @@ export const Header = () => {
                         </ul> */}
                             <input value={searchInput} onChange={handelonChange} className='placeholder-gray-400 text-gray-400 outline-none pl-5 bg-transparent search__mobile' type='text' placeholder='Bạn sắp đi đâu ?' />
                             <SearchIcon className='h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer' />
-                        </div>
+                        </form>
                         <div >
                             {searchInput &&
                                 <div className='mx-auto bg-white searchInput '>

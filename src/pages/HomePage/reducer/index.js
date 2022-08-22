@@ -7,8 +7,6 @@ const initialState = {
 }
 
 const dataCiTyReducer = (state = initialState,action) => {
-    console.log('datacity state',state);
-    console.log('datacity action',action);
     switch (action.type) {
         case ActionType.DATA_CITY_REQUEST:{
             state.loading = true;

@@ -1,37 +1,32 @@
-import * as ActionType from "./constants"
+import * as ActionType from "./constants";
 
 const initialState = {
-    loading: false,
+    loading:false,
     data: null,
     error: null,
 }
 
-const dataCiTyInputReducer = (state = initialState,action) => {
+export const informationImgReducer = (state = initialState,action) => {
     switch (action.type) {
-        
-        case ActionType.DATA_CITY_INPUT_REQUEST:{
+        case ActionType.INFOMARTION_IMG_REQUEST:{
             state.loading = true;
             state.data = null;
-            state.error = null;
+            state.error = null
             return {...state}
         }
-        case ActionType.DATA_CITY_INPUT_SUCCESS:{
+        case ActionType.INFOMARTION_IMG_SUCCESS:{
             state.loading = false;
             state.data = action.payload;
-            state.error = null;
-
+            state.error = null
             return {...state}
         }
-        case ActionType.DATA_CITY_INPUT_FAILED:{
+        case ActionType.INFOMARTION_IMG_FAILED:{
             state.loading = false;
             state.data = null;
-            state.error = action.payload;
+            state.error = action.payload
             return {...state}
         }
         default:
-
             return {...state}
     }
 } 
-
-export default dataCiTyInputReducer

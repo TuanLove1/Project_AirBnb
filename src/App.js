@@ -7,6 +7,7 @@ import { ListRoom } from "./pages/ListRoomPage/ListRoom"
 import { DetailRoom } from './pages/DetailRoom/DetailRoom';
 import { Login } from './pages/Login/Login';
 import { Register } from './pages/Register/Register';
+import { Information } from './pages/Infomation/Information';
 // import { Loading } from './pages/Loading/Loading';
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='' element={<Home/>} />
           <Route path='list-room/:id' element={<ListRoom />} />
           <Route path='detail-room/:id' element={<DetailRoom />} />
+          <Route path='information/:id' element={<Information />} />
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
         </Route>

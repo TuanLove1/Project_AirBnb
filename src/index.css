@@ -734,7 +734,10 @@ body {
     display: none !;
     right: 0 !important;
   }
-  
+  .info__mobile{
+    display: flex;
+    justify-content: center;
+  }
 }
 .btn-76,
 .btn-76 *,

@@ -5,7 +5,6 @@ import Moment from 'react-moment';
 import { Comment } from '../../components/Comment/Comment';
 import { ClipLoader } from 'react-spinners';
 export const Evaluate = (props) => {
-    console.log(props.params.id);
     const [datas, setData] = useState([]);
     const [limit, setLimit] = useState(4);
     const [loading, setLoading] = useState(false);

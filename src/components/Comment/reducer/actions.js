@@ -19,13 +19,15 @@ const actCommentRequest = () => {
         type: ActionType.COMMENT_REQUEST
     }
 }
-const actCommentSuccess = () => {
+const actCommentSuccess = (data) => {
     return {
-        type: ActionType.COMMENT_SUCCESS
+        type: ActionType.COMMENT_SUCCESS,
+        payload:data
     }
 }
-const actCommentFailed = () => {
+const actCommentFailed = (error) => {
     return {
-        type: ActionType.COMMENT_FAILED
+        type: ActionType.COMMENT_FAILED,
+        payload:error
     }
 }

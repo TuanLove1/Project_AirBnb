@@ -48,7 +48,6 @@ export const Booking = (props) => {
             navigate('/login')
         }
     }
-    console.log(state);
     return (
         <form onSubmit={handleSubmit} className='border-2 rounded-xl shadow-xl mt-5 hover:scale-105 transition ease-linear cursor-pointer '>
             <div className='mx-4 p-4'>
