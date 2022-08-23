@@ -2,9 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-  font-family:Raleway;
+
+body {
+  font-family: Raleway;
 }
+
 .grid {
   width: 100%;
   display: block;
@@ -149,17 +151,17 @@ body{
 /* >= Tablet */
 @media (min-width: 740px) {
   .row {
-      margin-left: -8px;
-      margin-right: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
   }
 
   .col {
-      padding-left: 8px;
-      padding-right: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   .mf8-0 {
-      display: none;
+    display: none;
   }
 
   .mf8-1,
@@ -174,138 +176,138 @@ body{
   .mf8-10,
   .mf8-11,
   .mf8-12 {
-      display: block;
+    display: block;
   }
 
   .mf8-1 {
-      flex: 0 0 8.33333%;
-      max-width: 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
   }
 
   .mf8-2 {
-      flex: 0 0 16.66667%;
-      max-width: 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
   }
 
   .mf8-3 {
-      flex: 0 0 25%;
-      max-width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 
   .mf8-4 {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
   }
 
   .mf8-5 {
-      flex: 0 0 41.66667%;
-      max-width: 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
   }
 
   .mf8-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .mf8-7 {
-      flex: 0 0 58.33333%;
-      max-width: 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
   }
 
   .mf8-8 {
-      flex: 0 0 66.66667%;
-      max-width: 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
   }
 
   .mf8-9 {
-      flex: 0 0 75%;
-      max-width: 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
   }
 
   .mf8-10 {
-      flex: 0 0 83.33333%;
-      max-width: 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
   }
 
   .mf8-11 {
-      flex: 0 0 91.66667%;
-      max-width: 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
   }
 
   .mf8-12 {
-      flex: 0 0 100%;
-      max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .mf8-o-1 {
-      margin-left: 8.33333%;
+    margin-left: 8.33333%;
   }
 
   .mf8-o-2 {
-      margin-left: 16.66667%;
+    margin-left: 16.66667%;
   }
 
   .mf8-o-3 {
-      margin-left: 25%;
+    margin-left: 25%;
   }
 
   .mf8-o-4 {
-      margin-left: 33.33333%;
+    margin-left: 33.33333%;
   }
 
   .mf8-o-5 {
-      margin-left: 41.66667%;
+    margin-left: 41.66667%;
   }
 
   .mf8-o-6 {
-      margin-left: 50%;
+    margin-left: 50%;
   }
 
   .mf8-o-7 {
-      margin-left: 58.33333%;
+    margin-left: 58.33333%;
   }
 
   .mf8-o-8 {
-      margin-left: 66.66667%;
+    margin-left: 66.66667%;
   }
 
   .mf8-o-9 {
-      margin-left: 75%;
+    margin-left: 75%;
   }
 
   .mf8-o-10 {
-      margin-left: 83.33333%;
+    margin-left: 83.33333%;
   }
 
   .mf8-o-11 {
-      margin-left: 91.66667%;
+    margin-left: 91.66667%;
   }
 }
 
 /* PC medium resolution > */
 @media (min-width: 1113px) {
   .row {
-      margin-left: -12px;
-      margin-right: -12px;
+    margin-left: -12px;
+    margin-right: -12px;
   }
 
   .row.sm-gutter {
-      margin-left: -5px;
-      margin-right: -5px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   .col {
-      padding-left: 12px;
-      padding-right: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .row.sm-gutter .col {
-      padding-left: 5px;
-      padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .l-0 {
-      display: none;
+    display: none;
   }
 
   .l-1,
@@ -321,116 +323,116 @@ body{
   .l-10,
   .l-11,
   .l-12 {
-      display: block;
+    display: block;
   }
 
   .l-1 {
-      flex: 0 0 8.33333%;
-      max-width: 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
   }
 
   .l-2 {
-      flex: 0 0 16.66667%;
-      max-width: 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
   }
 
   .l-2-4 {
-      flex: 0 0 20%;
-      max-width: 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
   }
 
   .l-3 {
-      flex: 0 0 25%;
-      max-width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 
   .l-4 {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
   }
 
   .l-5 {
-      flex: 0 0 41.66667%;
-      max-width: 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
   }
 
   .l-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .l-7 {
-      flex: 0 0 58.33333%;
-      max-width: 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
   }
 
   .l-8 {
-      flex: 0 0 66.66667%;
-      max-width: 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
   }
 
   .l-9 {
-      flex: 0 0 75%;
-      max-width: 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
   }
 
   .l-10 {
-      flex: 0 0 83.33333%;
-      max-width: 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
   }
 
   .l-11 {
-      flex: 0 0 91.66667%;
-      max-width: 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
   }
 
   .l-12 {
-      flex: 0 0 100%;
-      max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .l-o-1 {
-      margin-left: 8.33333%;
+    margin-left: 8.33333%;
   }
 
   .l-o-2 {
-      margin-left: 16.66667%;
+    margin-left: 16.66667%;
   }
 
   .l-o-3 {
-      margin-left: 25%;
+    margin-left: 25%;
   }
 
   .l-o-4 {
-      margin-left: 33.33333%;
+    margin-left: 33.33333%;
   }
 
   .l-o-5 {
-      margin-left: 41.66667%;
+    margin-left: 41.66667%;
   }
 
   .l-o-6 {
-      margin-left: 50%;
+    margin-left: 50%;
   }
 
   .l-o-7 {
-      margin-left: 58.33333%;
+    margin-left: 58.33333%;
   }
 
   .l-o-8 {
-      margin-left: 66.66667%;
+    margin-left: 66.66667%;
   }
 
   .l-o-9 {
-      margin-left: 75%;
+    margin-left: 75%;
   }
 
   .l-o-10 {
-      margin-left: 83.33333%;
+    margin-left: 83.33333%;
   }
 
   .l-o-11 {
-      margin-left: 91.66667%;
+    margin-left: 91.66667%;
   }
 }
 
@@ -443,6 +445,7 @@ body{
   border: 0 solid;
   box-sizing: border-box;
 }
+
 .btn-72 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
@@ -459,19 +462,24 @@ body{
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
 }
+
 .btn-72:disabled {
   cursor: default;
 }
+
 .btn-72:-moz-focusring {
   outline: auto;
 }
+
 .btn-72 svg {
   display: block;
   vertical-align: middle;
 }
+
 .btn-72 [hidden] {
   display: none;
 }
+
 .btn-72 {
   margin: 0 auto;
 
@@ -489,6 +497,7 @@ body{
   text-transform: uppercase;
   transition: 0.2s;
 }
+
 .btn-72:active {
   box-shadow: inset 5px 5px 10px #cee3f2, inset -5px -5px 10px #faffff;
 }
@@ -496,38 +505,38 @@ body{
 /* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
   .wide {
-      width: 644px;
+    width: 644px;
   }
 }
 
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
   .wide {
-      width: 984px;
+    width: 984px;
   }
 
   .wide .row {
-      margin-left: -12px;
-      margin-right: -12px;
+    margin-left: -12px;
+    margin-right: -12px;
   }
 
   .wide .row.sm-gutter {
-      margin-left: -5px;
-      margin-right: -5px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   .wide .col {
-      padding-left: 12px;
-      padding-right: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .wide .row.sm-gutter .col {
-      padding-left: 5px;
-      padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .wide .l-0 {
-      display: none;
+    display: none;
   }
 
   .wide .l-1,
@@ -543,129 +552,345 @@ body{
   .wide .l-10,
   .wide .l-11,
   .wide .l-12 {
-      display: block;
+    display: block;
   }
 
   .wide .l-1 {
-      flex: 0 0 8.33333%;
-      max-width: 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
   }
 
   .wide .l-2 {
-      flex: 0 0 16.66667%;
-      max-width: 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
   }
 
   .wide .l-2-4 {
-      flex: 0 0 20%;
-      max-width: 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
   }
 
   .wide .l-3 {
-      flex: 0 0 25%;
-      max-width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 
   .wide .l-4 {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
   }
 
   .wide .l-5 {
-      flex: 0 0 41.66667%;
-      max-width: 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
   }
 
   .wide .l-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .wide .l-7 {
-      flex: 0 0 58.33333%;
-      max-width: 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
   }
 
   .wide .l-8 {
-      flex: 0 0 66.66667%;
-      max-width: 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
   }
 
   .wide .l-9 {
-      flex: 0 0 75%;
-      max-width: 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
   }
 
   .wide .l-10 {
-      flex: 0 0 83.33333%;
-      max-width: 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
   }
 
   .wide .l-11 {
-      flex: 0 0 91.66667%;
-      max-width: 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
   }
 
   .wide .l-12 {
-      flex: 0 0 100%;
-      max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .wide .l-o-1 {
-      margin-left: 8.33333%;
+    margin-left: 8.33333%;
   }
 
   .wide .l-o-2 {
-      margin-left: 16.66667%;
+    margin-left: 16.66667%;
   }
 
   .wide .l-o-3 {
-      margin-left: 25%;
+    margin-left: 25%;
   }
 
   .wide .l-o-4 {
-      margin-left: 33.33333%;
+    margin-left: 33.33333%;
   }
 
   .wide .l-o-5 {
-      margin-left: 41.66667%;
+    margin-left: 41.66667%;
   }
 
   .wide .l-o-6 {
-      margin-left: 50%;
+    margin-left: 50%;
   }
 
   .wide .l-o-7 {
-      margin-left: 58.33333%;
+    margin-left: 58.33333%;
   }
 
   .wide .l-o-8 {
-      margin-left: 66.66667%;
+    margin-left: 66.66667%;
   }
 
   .wide .l-o-9 {
-      margin-left: 75%;
+    margin-left: 75%;
   }
 
   .wide .l-o-10 {
-      margin-left: 83.33333%;
+    margin-left: 83.33333%;
   }
 
   .wide .l-o-11 {
-      margin-left: 91.66667%;
+    margin-left: 91.66667%;
   }
 }
+
+.searchInput {
+  margin-top: 10px;
+  width: 300px;
+  height: 100px;
+  position: sticky;
+  z-index: 999999;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+
+.buttonRoom {
+  margin-top: 10px;
+  background: #00ffff00;
+  border: 1px solid #80808035;
+  border-radius: 10px;
+  padding: 3px 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
 @media (max-width: 1023px) {
-  .header__middle{
+  .header__middle {
     width: 100%;
   }
-  .search__mobile{
+
+  .search__mobile {
     width: 100%;
+    padding-left: 0 !important;
   }
-  .comehouse__mobile{
+
+  .comehouse__mobile {
     display: none;
   }
-  .header__right{
+
+  .header__right {
     float: right;
   }
+
+  .banner__button {
+    padding: 0.3rem !important;
+  }
+
+  .text__main {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .buttonRoom {
+    font-size: 15px;
+  }
+
+  .detail__rating {
+    font-size: 10px;
+  }
+
+  .all__city {
+    font-size: 8px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none !important;
+    right: 0 !important;
+
+  }
+
+  .slicn-prev,
+  .slick-next {
+    display: none !;
+    right: 0 !important;
+  }
+
+  .info__mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonCapnhatImg {
+    margin-bottom: 10px;
+  }
+
+  .content__banner {
+    top: 30% !important
+  }
+
+  .VI_ENG{
+    margin-right: 5px !important;
+  }
+  .buttonRoom {
+    font-size: 12px;
+  }
+  .bookMobile{
+    margin: 0 0 !important;
+  }
+  .date__mobile{
+    display: flex;
+    flex-direction: column;
+  }
+  .table__mobile{
+    overflow-x: auto;
+  }
+}
+
+.btn-76,
+.btn-76 *,
+.btn-76 :after,
+.btn-76 :before,
+.btn-76:after,
+.btn-76:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-76 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-76:disabled {
+  cursor: default;
+}
+
+.btn-76:-moz-focusring {
+  outline: auto;
+}
+
+.btn-76 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-76 [hidden] {
+  display: none;
+}
+
+.btn-76 {
+  --neon: #e92e0ea3;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s;
+}
+
+.btn-76:hover {
+  background: var(--neon);
+  box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+    0 0 100px var(--neon);
+  color: #fff;
+  outline-color: transparent;
+  transition: 0.2s linear 0.6s;
+}
+
+.btn-76 span {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+
+.btn-76 .top {
+  border-top: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+
+.btn-76:hover .top {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+
+.btn-76 .right {
+  border-right: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+
+.btn-76:hover .right {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.2s;
+}
+
+.btn-76 .bottom {
+  border-bottom: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+
+.btn-76:hover .bottom {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.4s;
+}
+
+.btn-76 .left {
+  border-left: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+
+.btn-76:hover .left {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.6s;
 }
