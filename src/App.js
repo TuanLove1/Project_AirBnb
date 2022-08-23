@@ -12,25 +12,18 @@ import { Information } from './pages/Infomation/Information';
 function App() {
   return (
     <BrowserRouter>
-      {/* <Loading/> */}
-      <Routes>
-<<<<<<< HEAD
-        {/* RouterHomePlate */}
-        <Route path='' element={<HomeTemplate/>}>
-          <Route path='home' element={<Home/>} />
-          <Route path='about' element={<About/>} />
-=======
-        <Route path='/' element={<HomeTemplate />}>
-          <Route path='' element={<Home/>} />
-          <Route path='list-room/:id' element={<ListRoom />} />
-          <Route path='detail-room/:id' element={<DetailRoom />} />
-          <Route path='information/:id' element={<Information />} />
-          <Route path='login' element={<Login />} />
-          <Route path='register' element={<Register />} />
->>>>>>> huutuan
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    {/* <Loading/> */}
+    <Routes>
+      <Route path='/' element={<HomeTemplate />}>
+        <Route path='' element={<Home/>} />
+        <Route path='list-room/:id' element={<ListRoom />} />
+        <Route path='detail-room/:id' element={<DetailRoom />} />
+        <Route path='information/:id' element={<Information />} />
+        <Route path='login' element={<Login />} />
+        <Route path='register' element={<Register />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
