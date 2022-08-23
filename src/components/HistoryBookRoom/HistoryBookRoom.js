@@ -9,8 +9,15 @@ export const HistoryBookRoom = (props) => {
   const dispatch = useDispatch();
   const prop = useSelector((state) => state.historyBookReducer)
   console.log(prop.data);
+ 
   const renderHistoryBook = () => {
     return prop.data?.map((history, index) => {
+      const startDate = moment(history.checkIn);
+      const timeEnd = moment(history.checkOut);
+      const diff = timeEnd.diff(startDate);
+      const diffDuration = moment.duration(diff);
+      const days = diffDuration.days();
+      console.log(days);
       return <tr key={index}>
         <td className='font-bold'>{index+1}</td>
         <td>
@@ -19,7 +26,7 @@ export const HistoryBookRoom = (props) => {
         <td>{history.roomId.name}</td>
         <td>{moment(history.checkIn).format('DD/MM/YYYY')}</td>
         <td>{moment(history.checkOut).format('DD/MM/YYYY')}</td>
-        <td className='font-bold'>{history.roomId.price}</td>
+        <td className='font-bold'>{(days*history.roomId.price*1).toLocaleString()}$</td>
       </tr>
     })
   }
@@ -28,7 +35,7 @@ export const HistoryBookRoom = (props) => {
   }, [])
   return (
     <div className='grid wide'>
-      <div className='row'>
+      <div className='row table__mobile'>
         <div style={{display:'flex',justifyContent:'center'}} className='col l-12 mf8-12 c-12 mt-4'>
           <table>
             <thead>

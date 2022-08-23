@@ -27,8 +27,8 @@ function SamplePrevArrow(props) {
 export default class SlickCarousel extends Component {
   
 renderHtmlCity = () => {
-    return this.props.data?.map((city, index) => {
-        return <div className={`${styleReset['width-item']}`}>
+    return this.props.data?.splice(0,12).map((city, index) => {
+        return <div className={`${styleReset['width-item']} ${styleReset['SlickCarousel_width-item__pckuA']}`}>
             <div key={index} className='all__city flex items-center  cursor-pointer rounded-md hover:scale-105 hover:bg-gray-100 m-2 transition-all ease-linear'>
                 <div className='mr-2 img__city'>
                     <img className='rounded w-10 h-10' src={city.image} />

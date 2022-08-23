@@ -27,7 +27,7 @@ export const Evaluate = (props) => {
             return <div key={index} className='col l-6 mf8-6 c-12'>
                 <div className='flex my-2'>
                     <div className='evalute__img mr-2'>
-                        <img className='w-10 h-10 rounded-full' src={comment.userId.avatar} />
+                        <img className='w-10 h-10 rounded-full object-cover' src={comment.userId.avatar} />
                     </div>
                     <div className='evalute__info'>
                         <h1 className='font-bold'>{comment.userId.name}</h1>
@@ -47,7 +47,7 @@ export const Evaluate = (props) => {
                 <div className='flex items-center font-bold mb-3'>
                     <StarIcon className='w-6 h-6 text-red-400 mr-2' /><h1>4,83(18 đánh giá)</h1>
                 </div>
-                {(localStorage.getItem("user")) ? <Comment dataId={props} /> : ''}
+                {(localStorage.getItem("user")) ? <Comment dataId={props} data={datas} /> : ''}
                 <div className='row'>
                     {renderComment()}
                     <div className='mx-auto mt-2'>

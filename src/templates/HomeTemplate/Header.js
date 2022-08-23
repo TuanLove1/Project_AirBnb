@@ -74,18 +74,18 @@ export const Header = () => {
 
     return (
         <>
-            <header className='sticky top-0 z-40 grid shadow-md p-4 bg-white z-10'>
+            <header className='sticky top-0 z-40 grid shadow-md p-4 bg-white '>
                 {/* Left */}
                 <div className='row flex items-center '>
-                    <div className='col l-3 mf8-3 c-0'>
-                        <div className='h-10 cursor-pointer my-auto'>
+                    <div className='col l-3 mf8-3 c-3'>
+                        <div className='h-10 cursor-pointer my-auto flex items-center'>
                             <img onClick={() => {
                                 navigate('/')
                             }} width={100} height={100} src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/2560px-Airbnb_Logo_B%C3%A9lo.svg.png' />
                         </div>
                     </div>
                     {/* Middle */}
-                    <div className='col l-6 mf8-6 c-12'>
+                    <div className='col l-6 mf8-6 c-6'>
                         <form className='flex items-center border-2 rounded-full py-2  justify-between px-3 m-auto w-1/2 header__middle hover:shadow-md transition-all ease-linear'>
                             {/* <ul className='bg-red-500 flex'>
                             <li className='mr-1'>
@@ -107,13 +107,13 @@ export const Header = () => {
                         </div>
                     </div>
                     {/* Right */}
-                    <div className='col l-3 mf8-3 c-0'>
+                    <div className='col l-3 mf8-3 c-3'>
                         <div className='flex items-center header__right '>
                             <p className='mr-3 mb-0 cursor-pointer comehouse__mobile hover:bg-gray-100 rounded-full p-2 transition-all ease-linear '>Trở thành chủ nhà</p>
-                            <GlobeAltIcon className='h-6 mr-3 cursor-pointer hover:shadow-2xl hover:bg-gray-400 hover:text-white rounded-full  transition-all ease-linear' />
+                            <GlobeAltIcon className='h-6  mr-3 cursor-pointer hover:shadow-2xl hover:bg-gray-400 hover:text-white rounded-full  transition-all ease-linear VI_ENG' />
                             {user ? <div onClick={() => { setModalLoginUser(!modalLoginUser) }} className=' relative flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>
                                 <MenuIcon className='h-6 mr-1' />
-                                <img className='w-6 h-6 rounded-full' src={user?.avatar || 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'} />
+                                <img className='w-6 h-6 rounded-full object-cover' src={user?.avatar || 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'} />
                                 {modalLoginUser && renderModalLoginUser()}
 
                             </div> : <div onClick={() => { setModalUser(!modalUser) }} className=' relative flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>

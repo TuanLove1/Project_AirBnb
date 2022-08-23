@@ -32,7 +32,7 @@ export const Comment = (props) => {
                     <div className='col l-10 mf8-10 c-12'>
                         <div className='flex my-2'>
                             <div className='comment__img mr-2'>
-                                <img className='w-10 h-10 rounded-full' src={avatar.avatar} alt='avatar' />
+                                <img className='w-10 h-10 rounded-full object-cover' src={avatar.avatar} alt='avatar' />
                             </div>
                             <div className='comment__info w-full border-2 rounded-xl flex justify-between items-center'>
                                 <div className='comment__input w-full'>

@@ -53,7 +53,7 @@ export const Information = () => {
                                         </div>
                                         <input onChange={handleOnChange} type='file' accept='image/png,image/jpg,image/gìf,imgae/png' />
                                         <div className='mt-2'>
-                                            <button type='submit' className='bg-red-400 p-1 rounded-md text-white'>Cập nhật ảnh đại diện</button>
+                                            <button type='submit' className='bg-red-400 p-1 rounded-md text-white buttonCapnhatImg'>Cập nhật ảnh đại diện</button>
                                         </div>
                                     </form>
                                     <div className='col l-9 mf8-9 c-12 bg-red-400 p-2 rounded-md'>

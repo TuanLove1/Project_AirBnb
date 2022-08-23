@@ -1,9 +1,10 @@
 import { StarIcon } from '@heroicons/react/solid'
 import React, { useState } from 'react'
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { api } from '../../api/utils'
+import moment from 'moment'
 
 export const Booking = (props) => {
     const navigate = useNavigate()
@@ -12,13 +13,20 @@ export const Booking = (props) => {
         checkIn: '',
         checkOut: '',
     })
+    const startDate = moment(state.checkIn);
+    const timeEnd = moment(state.checkOut);
+    const diff = timeEnd.diff(startDate);
+    const diffDuration = moment.duration(diff);
+    const days = diffDuration.days();
     const handleOnchange = (e) => {
-        const { name, value } = e.target
+        const { name, value } = e.target;
         setState({
             ...state,
             [name]: value
         });
+
     }
+    console.log(state);
     const bookRoom = (book) => {
         api.post('rooms/booking', book)
             .then((result) => {
@@ -38,7 +46,7 @@ export const Booking = (props) => {
         if (localStorage.getItem('user')) {
             bookRoom(state)
         }
-        else{
+        else {
             const MySwal = withReactContent(Swal)
             MySwal.fire({
                 title: <strong>Bạn chưa đăng nhập</strong>,
@@ -48,17 +56,19 @@ export const Booking = (props) => {
             navigate('/login')
         }
     }
+    console.log(props);
+
     return (
         <form onSubmit={handleSubmit} className='border-2 rounded-xl shadow-xl mt-5 hover:scale-105 transition ease-linear cursor-pointer '>
-            <div className='mx-4 p-4'>
+            <div className='mx-4 p-4 bookMobile'>
                 <div className='flex justify-between items-center mb-3'>
                     <div className='font-bold'>{props.data?.price}$/ đêm</div>
                     <div className='flex '>
                         <StarIcon className='h-6 w-6 text-red-400' />
-                        <span>(18 đánh giá)</span>
+                        <span>{`(${props.data?.locationId.valueate} đánh giá)`}</span>
                     </div>
                 </div>
-                <div className='flex justify-between mb-3'>
+                <div className='flex justify-between mb-3 date__mobile'>
                     <div className='p-2 border-2 rounded-xl'>
                         <label >Nhận phòng</label>
                         <input type='date' name='checkIn' onChange={handleOnchange} className="form-control" id="checkIn" />
@@ -80,13 +90,13 @@ export const Booking = (props) => {
                 </div>
                 <div className='flex justify-between p mb-3'>
                     <div className=''>
-                        {props.data?.price}$ x 5
+                        {days ? (`${(props.data?.price)}$ x ${days}`) : ''}
                     </div>
                     <div className=''>
-                        $221
+                        {days ? (`${(props.data?.price * days).toLocaleString()}$`) : ''}
                     </div>
                 </div>
-                <div className='text-right font-bold'>Tổng $252</div>
+                <div className='text-right font-bold'>{days ? (`${(props.data?.price * days).toLocaleString()}$`) : ''}</div>
             </div>
         </form>
     )

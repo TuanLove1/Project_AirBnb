@@ -694,6 +694,7 @@ body {
 
   .search__mobile {
     width: 100%;
+    padding-left: 0 !important;
   }
 
   .comehouse__mobile {
@@ -724,21 +725,51 @@ body {
   .all__city {
     font-size: 8px;
   }
+
   .slick-prev:before,
   .slick-next:before {
     display: none !important;
     right: 0 !important;
 
   }
-  .slicn-prev,.slick-next {
+
+  .slicn-prev,
+  .slick-next {
     display: none !;
     right: 0 !important;
   }
-  .info__mobile{
+
+  .info__mobile {
     display: flex;
     justify-content: center;
   }
+
+  .buttonCapnhatImg {
+    margin-bottom: 10px;
+  }
+
+  .content__banner {
+    top: 30% !important
+  }
+
+  .VI_ENG{
+    margin-right: 5px !important;
+  }
+  .buttonRoom {
+    font-size: 12px;
+  }
+  .bookMobile{
+    margin: 0 0 !important;
+  }
+  .date__mobile{
+    display: flex;
+    flex-direction: column;
+  }
+  .table__mobile{
+    overflow-x: auto;
+  }
 }
+
 .btn-76,
 .btn-76 *,
 .btn-76 :after,
@@ -748,6 +779,7 @@ body {
   border: 0 solid;
   box-sizing: border-box;
 }
+
 .btn-76 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
@@ -763,19 +795,24 @@ body {
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
 }
+
 .btn-76:disabled {
   cursor: default;
 }
+
 .btn-76:-moz-focusring {
   outline: auto;
 }
+
 .btn-76 svg {
   display: block;
   vertical-align: middle;
 }
+
 .btn-76 [hidden] {
   display: none;
 }
+
 .btn-76 {
   --neon: #e92e0ea3;
   box-sizing: border-box;
@@ -790,6 +827,7 @@ body {
   text-transform: uppercase;
   transition: 0.2s linear 0.1s;
 }
+
 .btn-76:hover {
   background: var(--neon);
   box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
@@ -798,50 +836,59 @@ body {
   outline-color: transparent;
   transition: 0.2s linear 0.6s;
 }
+
 .btn-76 span {
   display: block;
   inset: 0;
   position: absolute;
 }
+
 .btn-76 .top {
   border-top: 4px solid var(--neon);
   opacity: 0;
   transform: translateX(calc(-100% + var(--progress, 0%)));
   transition: none;
 }
+
 .btn-76:hover .top {
   --progress: 100%;
   opacity: 1;
   transition: transform 0.2s linear;
 }
+
 .btn-76 .right {
   border-right: 4px solid var(--neon);
   opacity: 0;
   transform: translateY(calc(-100% + var(--progress, 0%)));
   transition: none;
 }
+
 .btn-76:hover .right {
   --progress: 100%;
   opacity: 1;
   transition: transform 0.2s linear 0.2s;
 }
+
 .btn-76 .bottom {
   border-bottom: 4px solid var(--neon);
   opacity: 0;
   transform: translateX(calc(100% - var(--progress, 0%)));
   transition: none;
 }
+
 .btn-76:hover .bottom {
   --progress: 100%;
   opacity: 1;
   transition: transform 0.2s linear 0.4s;
 }
+
 .btn-76 .left {
   border-left: 4px solid var(--neon);
   opacity: 0;
   transform: translateY(calc(100% - var(--progress, 0%)));
   transition: none;
 }
+
 .btn-76:hover .left {
   --progress: 100%;
   opacity: 1;
