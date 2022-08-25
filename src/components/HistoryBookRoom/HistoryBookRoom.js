@@ -36,7 +36,7 @@ export const HistoryBookRoom = (props) => {
   return (
     <div className='grid wide'>
       <div className='row table__mobile'>
-        <div style={{display:'flex',justifyContent:'center'}} className='col l-12 mf8-12 c-12 mt-4'>
+        <div style={{display:'flex',justifyContent:'center'}} className='col l-12 mf8-12 c-12 mt-4 overflow-x-auto'>
           <table>
             <thead>
               <tr className='bg-red-400 text-white'>

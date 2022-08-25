@@ -753,7 +753,8 @@ body {
   }
 
   .VI_ENG{
-    margin-right: 5px !important;
+    /* margin-right: 5px !important; */
+    display: none;
   }
   .buttonRoom {
     font-size: 12px;
@@ -765,8 +766,16 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .table__mobile{
-    overflow-x: auto;
+  .form__mobile{
+    width: 100% !important;
+  }
+  .form__inputmobile{
+    width: 100% !important;
+  }
+  .table, th, td {
+    border: 1px solid black;
+    padding: 4px !important;
+    font-size: 10px;
   }
 }
 

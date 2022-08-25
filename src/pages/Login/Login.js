@@ -37,13 +37,13 @@ export const Login = () => {
                 <ClipLoader color='rgb(248 113 113)' />
             </div> : ''}
             <div style={{ backgroundImage: `url('https://blog.atairbnb.com/wp-content/uploads/2015/09/SummerTravelHeader-1600x900.001.jpg?fit=1600%2C900')`, backgroundSize: 'cover', padding: '50px', backgroundPosition: 'center' }} className=''>
-                <form onSubmit={handleSubmit} className='border-2 bg-gray-100 w-96 mx-auto p-10 rounded-xl shadow-xl '>
+                <form onSubmit={handleSubmit} className='border-2 bg-gray-100 w-96 mx-auto p-10 rounded-xl shadow-xl form__mobile'>
                     <h1 className='text-center font-bold text-2xl mb-3 text-red-400'>Đăng nhập</h1>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label htmlFor="email">Email</label>
                         <input name='email' onChange={handleOnchange} type="email" className="form-control" id="email" />
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label htmlFor="pwd">Mật khẩu</label>
                         <input name='password' onChange={handleOnchange} className="form-control" type="password" id="pwd" />
                     </div>
