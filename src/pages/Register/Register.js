@@ -103,41 +103,41 @@ export const Register = () => {
             </div> : ''}
             <div style={{ backgroundImage: `url('https://blog.atairbnb.com/wp-content/uploads/2015/09/SummerTravelHeader-1600x900.001.jpg?fit=1600%2C900')`, backgroundSize: 'cover', padding: '50px' }} className=''>
 
-                <form onSubmit={handleSubmit} className='border-2  bg-gray-100  w-96 mx-auto p-10 rounded-xl shadow-xl hover:border-black transition ease-linear cursor-pointer'>
+                <form onSubmit={handleSubmit} className='border-2  bg-gray-100  w-96 mx-auto p-10 rounded-xl shadow-xl hover:border-black transition ease-linear cursor-pointer form__mobile'>
                     <h1 className='text-center font-bold text-2xl mb-3 text-red-400'>Đăng ký</h1>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label >Name</label>
                         <input name='name' onChange={handleOnchange} className="form-control" id="name" />
                         <p className='text-danger'>{state.error.name}</p>
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label htmlFor="email">Email</label>
                         <input data-type={"emailType"} name='email' onChange={handleOnchange} type="email" className="form-control" id="email" />
                         <p className='text-danger'>{state.error.email}</p>
 
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label htmlFor="pwd">Mật khẩu</label>
                         <input data-minlength="6" data-maxlength="32" name='password' onChange={handleOnchange} className="form-control" type="password" id="password" />
                         <p className='text-danger'>{state.error.password}</p>
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label >Phone</label>
                         <input name='phone' onChange={handleOnchange} className="form-control" id="phone" />
                         <p className='text-danger'>{state.error.phone}</p>
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label >Ngày/tháng/năm sinh</label>
                         <input type='date' name='birthday' onChange={handleOnchange} className="form-control" id="birthday" />
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label >Giới tính</label>
                         <div className='flex '>
                             <input onChange={handleOnchange} type="radio" name="gender" /><span className='mr-3'>Nam</span>
                             <input onChange={handleOnchange} type="radio" name="gender" /><span>Nữ</span>
                         </div>
                     </div>
-                    <div className="form-group w-80 mx-auto">
+                    <div className="form-group w-80 mx-auto form__inputmobile">
                         <label >Địa chỉ</label>
                         <input name='address' onChange={handleOnchange} className="form-control" id="address" />
                         <p className='text-danger'>{state.error.address}</p>
