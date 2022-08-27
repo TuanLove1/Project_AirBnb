@@ -22,15 +22,16 @@ export const Evaluate = (props) => {
     const renderLimit = () => {
         setLimit(limit + 4)
     }
+    console.log(datas);
     const renderComment = () => {
         return datas?.map((comment, index) => {
             return <div key={index} className='col l-6 mf8-6 c-12'>
                 <div className='flex my-2'>
                     <div className='evalute__img mr-2'>
-                        <img className='w-10 h-10 rounded-full object-cover' src={comment.userId.avatar} />
+                        <img className='w-10 h-10 rounded-full object-cover' src={comment.userId?.avatar} />
                     </div>
                     <div className='evalute__info'>
-                        <h1 className='font-bold'>{comment.userId.name}</h1>
+                        <h1 className='font-bold'>{comment.userId?.name}</h1>
                         <Moment className='text-gray-400' format='MMMM Do YYYY, h:mm:ss a'>{comment.created_at}</Moment>
                     </div>
                 </div>
