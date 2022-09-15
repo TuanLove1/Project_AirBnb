@@ -8,6 +8,10 @@ import { DetailRoom } from './pages/DetailRoom/DetailRoom';
 import { Login } from './pages/Login/Login';
 import { Register } from './pages/Register/Register';
 import { Information } from './pages/Infomation/Information';
+import AdminUser  from './pages/Admin/User';
+import AdminLocation from './pages/Admin/Location';
+import AdminRoom from './pages/Admin/Room';
+import AdminTemplate from './templates/AdminTemplate';
 // import { Loading } from './pages/Loading/Loading';
 function App() {
   return (
@@ -21,6 +25,11 @@ function App() {
         <Route path='information/:id' element={<Information />} />
         <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />
+      </Route>
+      <Route path='/' element={<AdminTemplate />}>
+        <Route path='user' element={<AdminUser />}/>
+        <Route path='location' element={<AdminLocation />}/>
+        <Route path='room' element={<AdminRoom />}/>
       </Route>
     </Routes>
   </BrowserRouter>

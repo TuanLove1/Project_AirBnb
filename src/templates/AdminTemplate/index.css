@@ -1,0 +1,51 @@
+.admin
+{
+  display: flex;      
+}
+
+.sidebar
+{
+    width: 20%;
+    background: #0f004b7e;
+    border-top-right-radius: 40px;
+}
+
+.wrapper
+{
+    width: 80%;
+    padding-top: 50px;
+}
+
+.logo
+{
+    padding: 20px;
+    border-bottom: yellow;
+    font-size: 30px;
+}
+
+.logo h1
+{
+    color:#ff385c;
+    padding-left: 50px;
+}
+
+.title
+{
+    padding: 20px;
+}
+
+.title span
+{
+    font-size: 15px;
+    color: black;
+}
+
+.title:hover
+{
+    background: white;
+}
+
+/* .title span:hover
+{
+    color: black;
+} */
