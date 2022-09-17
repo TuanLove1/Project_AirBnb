@@ -28,10 +28,14 @@
       <tr>
        <th>Họ và Tên</th>
        <th>Github</th>
+       <th>Link Youtube</th>
+       <th>Link vercel</th>
        </tr>
       <tr>
        <td>Nguyễn Hữu Tuấn  </td>
         <td>https://github.com/TuanLove1/</td>
+        <td>https://www.youtube.com/watch?v=XVt_8Yl7-eY</td>
+        <td>https://project-air-bnb-rho.vercel.app/</td>
         </tr>
       
 </table>
