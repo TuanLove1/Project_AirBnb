@@ -22,7 +22,6 @@ export const Evaluate = (props) => {
     const renderLimit = () => {
         setLimit(limit + 4)
     }
-    console.log(datas);
     const renderComment = () => {
         return datas?.map((comment, index) => {
             return <div key={index} className='col l-6 mf8-6 c-12'>

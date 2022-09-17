@@ -26,7 +26,6 @@ export const Booking = (props) => {
         });
 
     }
-    console.log(state);
     const bookRoom = (book) => {
         api.post('rooms/booking', book)
             .then((result) => {
@@ -56,7 +55,6 @@ export const Booking = (props) => {
             navigate('/login')
         }
     }
-    console.log(props);
 
     return (
         <form onSubmit={handleSubmit} className='border-2 rounded-xl shadow-xl mt-5 hover:scale-105 transition ease-linear cursor-pointer '>

@@ -8,7 +8,6 @@ export const HistoryBookRoom = (props) => {
   const { id } = props;
   const dispatch = useDispatch();
   const prop = useSelector((state) => state.historyBookReducer)
-  console.log(prop.data);
  
   const renderHistoryBook = () => {
     return prop.data?.map((history, index) => {
@@ -17,7 +16,6 @@ export const HistoryBookRoom = (props) => {
       const diff = timeEnd.diff(startDate);
       const diffDuration = moment.duration(diff);
       const days = diffDuration.days();
-      console.log(days);
       return <tr key={index}>
         <td className='font-bold'>{index+1}</td>
         <td>
