@@ -39,7 +39,7 @@
         </tr>
          <td>Nguyễn Hà Nhật Hảo </td>
         <td>https://github.com/TuanLove1/</td>
-        <td></td>
+        <td>https://www.youtube.com/watch?v=uF18s2xA4WU</td>
         <td>https://project-air-bnb-rho.vercel.app/</td>
         </tr>
       
