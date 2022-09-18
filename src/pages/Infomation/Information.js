@@ -13,7 +13,6 @@ export const Information = () => {
     const dispatch = useDispatch();
     const params = useParams()
     const prop = useSelector((state) => state.informationReducer)
-    console.log(prop.data?._id);
     const propImg = useSelector((state) => state.informationImgReducer)
     const { loading } = propImg;
     let [image, setImage] = useState('')

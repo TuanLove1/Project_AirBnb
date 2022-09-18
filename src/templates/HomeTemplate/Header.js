@@ -14,7 +14,6 @@ export const Header = () => {
     const [modalUser, setModalUser] = useState(false);
     const [modalLoginUser, setModalLoginUser] = useState(false);
     let user = JSON.parse(localStorage.getItem('user'))
-    console.log(user);
     let navigate = useNavigate();
     const renderInput = () => {
         return prop.data?.map((city, index) => {
