@@ -60,6 +60,12 @@ export const Header = () => {
             <h1 onClick={() => {
                 navigate(`information/${user._id}`)
             }} className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Thông tin cá nhân</h1>
+            {
+                user && user.type === 'ADMIN' ? 
+                <a href='/admin/user'>
+                <h1 className='font-bold my-2 p-2 hover:bg-gray-300 rounded-md transition-all ease-linear'>Trang Admin</h1>
+                </a> : ''
+            }
             <h1 onClick={() => {
                 localStorage.removeItem('user')
                 localStorage.removeItem('token')
@@ -112,7 +118,7 @@ export const Header = () => {
                             <GlobeAltIcon className='h-6  mr-3 cursor-pointer hover:shadow-2xl hover:bg-gray-400 hover:text-white rounded-full  transition-all ease-linear VI_ENG' />
                             {user ? <div onClick={() => { setModalLoginUser(!modalLoginUser) }} className=' relative flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>
                                 <MenuIcon className='h-6 mr-1' />
-                                <img className='w-6 h-6 rounded-full object-cover' src={user?.avatar || 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'} />
+                                <img className='w-6 h-6 rounded-full object-cover' src={user && user.avatar ? user.avatar : 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'} />
                                 {modalLoginUser && renderModalLoginUser()}
 
                             </div> : <div onClick={() => { setModalUser(!modalUser) }} className=' relative flex items-end border-solid border-2 rounded-full p-2 cursor-pointer  hover:shadow-md ease-in duration-200  '>
