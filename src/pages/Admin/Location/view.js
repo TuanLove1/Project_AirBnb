@@ -19,46 +19,45 @@ const ViewLocationComponent = (props) => {
                 backdrop={false}
                 keyboard={false}
                 portal={false}>
-                <div className="modal-header">
-                    <CModalTitle >{`CHI TIẾT VỊ TRÍ`}</CModalTitle>
-                    <button type="button" className="btn-close" aria-label="Close" onClick={() => onClose()}></button>
+                <div className="modal-header" style={{background :"#1890ff"}}>
+                    <CModalTitle style={{ fontWeight: 800, color:"white"}}>{`CHI TIẾT VỊ TRÍ`}</CModalTitle>
                 </div>
                 <CModalBody>
-                    <CRow className='mb-3'>
+                    <CRow className='mb-4'> 
                         <CCol sm={3}>
-                            <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Tên vị trí:</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 600, fontSize: '20px' }}>Tên vị trí:</CFormLabel>
                         </CCol>
                         <CCol sm={9}>
-                            <CFormLabel style={{ fontWeight: 400, fontSize: '14px' }}>{location?.name}</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 400, fontSize: '20px' }}>{location?.name}</CFormLabel>
                         </CCol>
                     </CRow>
-                    <CRow className='mb-3'>
+                    <CRow className='mb-4'>
                         <CCol sm={3}>
-                            <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Tỉnh/Thành:</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 600, fontSize: '20px' }}>Tỉnh/Thành:</CFormLabel>
                         </CCol>
                         <CCol sm={9}>
-                            <CFormLabel style={{ fontWeight: 400, fontSize: '14px' }}>{location?.province}</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 400, fontSize: '20px' }}>{location?.province}</CFormLabel>
                         </CCol>
                     </CRow>
-                    <CRow className='mb-3'>
+                    <CRow className='mb-4'>
                         <CCol sm={3}>
-                            <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Quốc gia:</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 600, fontSize: '20px' }}>Quốc gia:</CFormLabel>
                         </CCol>
                         <CCol sm={9}>
-                            <CFormLabel style={{ fontWeight: 400, fontSize: '14px' }}>{location?.country}</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 400, fontSize: '20px' }}>{location?.country}</CFormLabel>
                         </CCol>
                     </CRow>
-                    <CRow className='mb-3'>
+                    <CRow >
                         <CCol sm={3}>
-                            <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Đánh giá:</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 600, fontSize: '20px' }}>Đánh giá:</CFormLabel>
                         </CCol>
                         <CCol sm={9}>
-                            <CFormLabel style={{ fontWeight: 400, fontSize: '14px' }}>{location?.valueate}</CFormLabel>
+                            <CFormLabel style={{ fontWeight: 400, fontSize: '20px' }}>{location?.valueate}</CFormLabel>
                         </CCol>
                     </CRow>
                 </CModalBody>
                 <CModalFooter>
-                    <CButton color="success" size="sm" onClick={() => onClose()}> Thoát</CButton>
+                    <CButton size="sm" color='dark' style={{background:"black"}} onClick={() => onClose()}>Thoát</CButton>
                 </CModalFooter>
             </CModal>
         </>

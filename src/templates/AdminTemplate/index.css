@@ -5,15 +5,19 @@
 
 .sidebar
 {
-    width: 20%;
-    background: #0f004b7e;
+    width: 17%;
+    background: #386bfd;
     border-top-right-radius: 40px;
+}
+
+.sidebar-nav
+{
+    padding-top: 20px;
 }
 
 .wrapper
 {
-    width: 80%;
-    padding-top: 50px;
+    width: 83%;
 }
 
 .logo
@@ -21,12 +25,15 @@
     padding: 20px;
     border-bottom: yellow;
     font-size: 30px;
+    display: flex;
 }
+
 
 .logo h1
 {
-    color:#ff385c;
-    padding-left: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color:#ff7977;
 }
 
 .title
@@ -37,15 +44,34 @@
 .title span
 {
     font-size: 15px;
-    color: black;
+    color: white;
+    font-weight: 600;
 }
 
 .title:hover
 {
     background: white;
+    color: black;
 }
 
-/* .title span:hover
-{
+.title:hover span {
     color: black;
-} */
+}
+
+.containder-lg
+{
+    max-width: 1200px;
+}
+
+.adminHeader 
+{
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.shadow-xl
+{
+    z-index: 1;
+}

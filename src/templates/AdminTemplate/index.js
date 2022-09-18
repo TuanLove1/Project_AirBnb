@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import AppContent from './AppContent'
 import AppSidebar from './AppSidebar'
-import styles from './index.css'
+import AppHeader from './AppHeader'
 
 const AdminTemplate = () => {
   useEffect(() => {
@@ -14,7 +14,8 @@ const AdminTemplate = () => {
     <div className="admin">
       <AppSidebar />
       <div className="wrapper d-flex flex-column min-vh-100 bg-light">
-        <div className="body flex-grow-1 px-3">
+        <div className="body flex-grow-1">
+          <AppHeader />
           <AppContent />
         </div>
       </div>

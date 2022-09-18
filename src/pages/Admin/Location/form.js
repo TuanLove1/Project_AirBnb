@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {
     CButton, CCol, CModal, CModalBody, CModalFooter, CModalTitle,
-    CRow, CForm, CFormLabel, CFormInput, CFormTextarea
+    CRow, CForm, CFormLabel, CFormInput,
 } from '@coreui/react'
 import _ from 'lodash'
 import { sendHttpRequestMessage } from '../../../api/httpClientExtension'
@@ -18,7 +18,7 @@ const initPayload = {
 }
 
 const FormComponent = (props) => {
-    let { visible, header, onClose, id } = props
+    let { visible, header, backgroundColor, onClose, id } = props
     console.log(visible)
     const [currentPayload, setCurrentPayload] = useState(_.cloneDeep(initPayload))
     useEffect(() => {
@@ -116,9 +116,8 @@ const FormComponent = (props) => {
                 <CForm className="g-3 needs-validation" noValidate
                     validated={validated}
                     onSubmit={onSubmit}>
-                    <div className="modal-header">
-                        <CModalTitle >{header}</CModalTitle>
-                        <button type="button" className="btn-close" aria-label="Close" onClick={() => onClose()}></button>
+                    <div className="modal-header" style={{ background : backgroundColor}}>
+                        <CModalTitle style={{ color : "white"}}>{header}</CModalTitle>
                     </div>
                     <CModalBody>
                         <CRow className='mb-3'>
@@ -163,8 +162,8 @@ const FormComponent = (props) => {
                         </CRow>
                     </CModalBody>
                     <CModalFooter>
-                        <CButton type="submit" color="success" size="sm" className="btn-add"> Xác nhận</CButton>
-                        <CButton color="success" size="sm" className="btn-add" onClick={() => onClose()}> Thoát</CButton>
+                        <CButton type="submit" size="sm" className="btn-add" style={{ background : backgroundColor, color:"white"}}> Xác nhận</CButton>
+                        <CButton size="sm" className="btn-add" color='dark' style={{background:"black"}} onClick={() => onClose()}> Thoát</CButton>
                     </CModalFooter>
                 </CForm>
             </CModal>

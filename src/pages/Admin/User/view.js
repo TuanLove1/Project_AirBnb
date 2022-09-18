@@ -20,8 +20,8 @@ const ViewUserComponent = (props) => {
                 backdrop={false}
                 keyboard={false}
                 portal={false}>
-                <div className="modal-header">
-                    <CModalTitle >{`CHI TIẾT NGƯỜI DÙNG`}</CModalTitle>
+                <div className="modal-header" style={{background :"#1890ff"}}>
+                    <CModalTitle style={{color :"white"}}>{`CHI TIẾT NGƯỜI DÙNG`}</CModalTitle>
                     <button type="button" className="btn-close" aria-label="Close" onClick={() => onClose()}></button>
                 </div>
                 <CModalBody>
@@ -59,7 +59,7 @@ const ViewUserComponent = (props) => {
                     </CRow>
                 </CModalBody>
                 <CModalFooter>
-                    <CButton color="success" size="sm" onClick={() => onClose()}> Thoát</CButton>
+                    <CButton color="dark" size="sm" style={{background :"black"}} onClick={() => onClose()}> Thoát</CButton>
                 </CModalFooter>
             </CModal>
         </>

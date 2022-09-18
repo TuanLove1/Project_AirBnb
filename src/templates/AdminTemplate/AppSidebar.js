@@ -26,23 +26,25 @@ const AppSidebar = () => {
       className={`${styles.sidebar}`}
     >
       <div className='logo'>
+          <img src="/images/logo.png" style={{ height : '50px', witdh : '50px'}} />
           <h1>AirBnb</h1>
-          <hr  width="100%" size="5px" align="center" color="yellow" />
+          
       </div>
+      <hr  width="100%" size="5px" align="center" color="yellow" />
       <CSidebarNav>
         <SimpleBar>
           <div className='title'>
-            <a style={{textDecoration: 'none', color: 'aliceblue'}} onClick={()=>navigate("/user")}>
+            <a style={{textDecoration: 'none'}} onClick={()=>navigate("/admin/user")}>
             <span>Quản lý thông tin người dùng</span>
             </a>
           </div>
           <div className='title'>
-            <a style={{textDecoration: 'none', color: 'aliceblue'}} onClick={()=>navigate("/location")}>
+            <a style={{textDecoration: 'none'}} onClick={()=>navigate("/admin/location")}>
             <span>Quản lý thông tin vị trí</span>
             </a>
           </div>
           <div className='title'>
-            <a style={{textDecoration: 'none', color: 'aliceblue'}} onClick={()=>navigate("/room")}>
+            <a style={{textDecoration: 'none'}} onClick={()=>navigate("/admin/room")}>
             <span>Quản lý thông tin phòng</span>
             </a>
           </div>

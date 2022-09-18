@@ -5,9 +5,9 @@ const Location = React.lazy(() => import('../pages/Admin/Location'))
 const Room = React.lazy(() => import('../pages/Admin/Room'))
 
 const routes = [
-    { path: '/user', name: 'Users', element: Users, exact: true },
-    { path: '/location', name: 'Locations', element: Location, exact: true },
-    { path: '/room', name: 'Rooms', element: Room, exact: true },
+    { path: '/admin/user', name: 'Users', element: Users, exact: true },
+    { path: '/admin/location', name: 'Locations', element: Location, exact: true },
+    { path: '/admin/room', name: 'Rooms', element: Room, exact: true },
   ]
 
 export default routes  

@@ -31,7 +31,7 @@ const initPayload = {
 }
 
 const FormComponent = (props) => {
-    let { visible, header, onClose, id } = props
+    let { visible, header, backgroundColor,onClose, id } = props
     const [currentPayload, setCurrentPayload] = useState(_.cloneDeep(initPayload))
     const [locationOptions, setLocationOptions] = useState(null)
     useEffect(() => {
@@ -277,12 +277,11 @@ const FormComponent = (props) => {
                 <CForm className="g-3 needs-validation" noValidate
                     validated={validated}
                     onSubmit={onSubmit}>
-                    <div className="modal-header">
-                        <CModalTitle >{header}</CModalTitle>
-                        <button type="button" className="btn-close" aria-label="Close" onClick={() => onClose()}></button>
+                    <div className="modal-header" style={{background : backgroundColor}}>
+                        <CModalTitle style={{color : "white"}}>{header}</CModalTitle>
                     </div>
                     <CModalBody>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Tên phòng: <sup className='sup-required'>*</sup></CFormLabel>
                             </CCol>
@@ -292,7 +291,7 @@ const FormComponent = (props) => {
                                     placeholder="Nhập tên phòng" feedbackInvalid="Thông tin bắt buộc." />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Vị trí: <sup className='sup-required'>*</sup></CFormLabel>
                             </CCol>
@@ -302,7 +301,7 @@ const FormComponent = (props) => {
                                     onChange={handleChangeLocation} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Giá: <sup className='sup-required'>*</sup></CFormLabel>
                             </CCol>
@@ -314,7 +313,7 @@ const FormComponent = (props) => {
                                     onChange={handleChangePrice} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Khách: <sup className='sup-required'>*</sup></CFormLabel>
                             </CCol>
@@ -324,7 +323,7 @@ const FormComponent = (props) => {
                                     placeholder="Nhập số lượng khách" feedbackInvalid="Thông tin bắt buộc." />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Giường ngủ: <sup className='sup-required'>*</sup></CFormLabel>
                             </CCol>
@@ -334,7 +333,7 @@ const FormComponent = (props) => {
                                     placeholder="Nhập số giường" feedbackInvalid="Thông tin bắt buộc." />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Bồn tắm: <sup className='sup-required'>*</sup></CFormLabel>
                             </CCol>
@@ -344,7 +343,7 @@ const FormComponent = (props) => {
                                     placeholder="Nhập bồn tắm" feedbackInvalid="Thông tin bắt buộc." />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Thang máy: </CFormLabel>
                             </CCol>
@@ -360,7 +359,7 @@ const FormComponent = (props) => {
                                     checked={payload.hotTub} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Hồ bơi:</CFormLabel>
                             </CCol>
@@ -376,7 +375,7 @@ const FormComponent = (props) => {
                                     checked={payload.indoorFireplace} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Máy sấy khô:</CFormLabel>
                             </CCol>
@@ -392,7 +391,7 @@ const FormComponent = (props) => {
                                     checked={payload.gym} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Phòng bếp:</CFormLabel>
                             </CCol>
@@ -408,7 +407,7 @@ const FormComponent = (props) => {
                                     checked={payload.wifi} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Sưởi:</CFormLabel>
                             </CCol>
@@ -424,7 +423,7 @@ const FormComponent = (props) => {
                                     checked={payload.cableTV} />
                             </CCol>
                         </CRow>
-                        <CRow className='mb-3'>
+                        <CRow className='mb-2'>
                             <CCol sm={3}>
                                 <CFormLabel style={{ fontWeight: 500, fontSize: '14px' }}>Mô tả:</CFormLabel>
                             </CCol>
@@ -436,8 +435,8 @@ const FormComponent = (props) => {
                         </CRow>
                     </CModalBody>
                     <CModalFooter>
-                        <CButton type="submit" color="success" size="sm" className="btn-add"> Xác nhận</CButton>
-                        <CButton color="success" size="sm" className="btn-add" onClick={() => onClose()}> Thoát</CButton>
+                        <CButton type="submit" size="sm" style={{background:backgroundColor}} className="btn-add"> Xác nhận</CButton>
+                        <CButton color="dark"  size="sm" className="btn-add" style={{background:"black"}} onClick={() => onClose()}> Thoát</CButton>
                     </CModalFooter>
                 </CForm>
             </CModal>
