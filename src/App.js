@@ -27,9 +27,9 @@ function App() {
         <Route path='register' element={<Register />} />
       </Route>
       <Route path='/' element={<AdminTemplate />}>
-        <Route path='user' element={<AdminUser />}/>
-        <Route path='location' element={<AdminLocation />}/>
-        <Route path='room' element={<AdminRoom />}/>
+        <Route path='/admin/user' element={<AdminUser />}/>
+        <Route path='/admin/location' element={<AdminLocation />}/>
+        <Route path='/admin/room' element={<AdminRoom />}/>
       </Route>
     </Routes>
   </BrowserRouter>
