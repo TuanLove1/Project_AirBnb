@@ -78,7 +78,7 @@ const RoomComponent = () => {
                     <CTableDataCell style={{justifyContent : 'center', textAlign :'center'}}><img src={room.image} /></CTableDataCell>
                     <CTableDataCell>{room.locationId?.name}</CTableDataCell>
                     <CTableDataCell style={{ textAlign: 'center', justifyContent : 'center'}}>{room.guests}</CTableDataCell>
-                    <CTableDataCell style={{paddingLeft :'17px', paddingTop: '30px'}}>
+                    <CTableDataCell className="feature_room" style={{paddingLeft :'17px', paddingTop: '30px'}}>
                         <button className="btn" type="button" onClick={() => setVisibleView({ visible: true, id: room._id })}
                             style={{ border: '1px solid black', background: '#1890ff', color: 'white', marginLeft :'15px' }}>
                             Chi tiết
