@@ -56,7 +56,7 @@ const LocationComponent = () => {
                     <CTableDataCell>{location.name}</CTableDataCell>
                     <CTableDataCell>{location.province}</CTableDataCell>
                     <CTableDataCell>{location.country}</CTableDataCell>
-                    <CTableDataCell style={{paddingLeft :'28px'}}>
+                    <CTableDataCell className="feature_location" style={{paddingLeft :'28px'}}>
                         <button className="btn" type="button" onClick={() => setVisibleView({ visible: true, id: location._id })}
                             style={{ border: '1px solid black', background: '#1890ff', color: 'white', marginLeft :'15px' }}>
                             Chi tiết
@@ -125,7 +125,7 @@ const LocationComponent = () => {
                         <CCol sm={5} lg={3} style={{ textAlign: 'left' }} className='mb-3'>
                             <CButton color="primary"
                                 onClick={handleSearch}
-                                className="btn-add bg-sky-500 hover:bg-sky-700"> Tìm kiếm</CButton>
+                                className="btn-add bg-sky-500 hover:bg-sky-700 search"> Tìm kiếm</CButton>
                         </CCol>
                     </CRow>
                     <CRow>
@@ -139,7 +139,7 @@ const LocationComponent = () => {
                             <CCol xs={12}>
                                 <CTable className="table table-hover table-striped">
                                     <CTableHead>
-                                        <CTableRow >
+                                        <CTableRow className="title_table">
                                             <CTableHeaderCell style={{ width: '5%' , textAlign :"center"}}>STT</CTableHeaderCell>
                                             <CTableHeaderCell style={{ width: '25%', textAlign :"center" }}>Tên vị trí</CTableHeaderCell>
                                             <CTableHeaderCell style={{ width: '20%', textAlign :"center" }}>Tỉnh/Thành</CTableHeaderCell>

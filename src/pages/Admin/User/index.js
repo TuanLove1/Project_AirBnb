@@ -45,10 +45,9 @@ const UserComponent = () => {
                 <CTableRow key={index}>
                     <CTableDataCell style={{ textAlign: 'center' }}>{index + 1}</CTableDataCell>
                     <CTableDataCell style={{ textAlign: 'left' }}>{user.name}</CTableDataCell>
-                    <CTableDataCell style={{ textAlign: 'center' }}>{user.email}</CTableDataCell>
+                    <CTableDataCell className="email_user" style={{ textAlign: 'center' }}>{user.email}</CTableDataCell>
                     <CTableDataCell style={{ textAlign: 'center' }}>{user.phone}</CTableDataCell>
-                    <CTableDataCell style={{ textAlign: 'center' }}>{user.address}</CTableDataCell>
-                    <CTableDataCell style={{ paddingLeft :'25px'}}>
+                    <CTableDataCell className="feature_user" style={{ paddingLeft :'25px'}}>
                         <button className="btn" type="button" onClick={() => setVisibleView({ visible: true, id: user._id })}
                             style={{ border: '1px solid black', background: '#1890ff', color: 'white', marginLeft :'25px' }}>
                             Chi tiết
@@ -135,7 +134,6 @@ const UserComponent = () => {
                                             <CTableHeaderCell style={{ width: '13%' }}>Tên người dùng</CTableHeaderCell>
                                             <CTableHeaderCell style={{ width: '13%' }}>E-mail</CTableHeaderCell>
                                             <CTableHeaderCell style={{ width: '12%' }}>Số điện thoại</CTableHeaderCell>
-                                            <CTableHeaderCell style={{ width: '20%' }}>Địa Chỉ</CTableHeaderCell>
                                             <CTableHeaderCell style={{ width: '27%' }}>Chức năng</CTableHeaderCell>
                                         </CTableRow>
                                     </CTableHead>
