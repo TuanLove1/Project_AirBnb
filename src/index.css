@@ -726,7 +726,9 @@ body {
     font-size: 8px;
     width: 100% !important;
   }
-
+  .hover\:bg-gray-100:hover{
+    background-color: transparent !important;
+  }
   .slick-prev:before,
   .slick-next:before {
     display: none !important;
