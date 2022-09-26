@@ -21,7 +21,7 @@ export const DetailRoom = () => {
             {loading ? <div style={{ backgroundColor: 'rgba(0,0,0,.5)', height: '100%', width: '100%', position: 'fixed', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '999' }} className=''>
                 <ClipLoader color='rgb(248 113 113)' />
             </div> : ''}
-            <div className='grid wide'>
+            <div className='grid wide detail__room'>
                 <h1 className='my-3 font-bold'>{data?.name}</h1>
                 <div className='row flex justify-between'>
                     <div className='col l-8 mf8-8 c8'>

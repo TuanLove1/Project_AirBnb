@@ -5,6 +5,8 @@ import { Footer } from '../../templates/HomeTemplate/Footer'
 import { Header } from '../../templates/HomeTemplate/Header'
 import { actRegisterAirBnb } from './reducer/actions'
 import '@tsamantanis/react-glassmorphism/dist/index.css'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import { ClipLoader } from 'react-spinners'
 
 export const Register = () => {
@@ -43,8 +45,15 @@ export const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const { error } = state;
+        let valid = true;
         for (let key in error) {
             if (error[key] !== '') {
+                const MySwal = withReactContent(Swal)
+                MySwal.fire({
+                    title: <strong>Bạn phải nhập đầy đủ thông tin</strong>,
+                    html: <i>You clicked the button!</i>,
+                    icon: 'error'
+                })
                 return;
             }
         }

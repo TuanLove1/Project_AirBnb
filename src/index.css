@@ -724,6 +724,7 @@ body {
 
   .all__city {
     font-size: 8px;
+    width: 100% !important;
   }
 
   .slick-prev:before,
@@ -776,6 +777,12 @@ body {
     border: 1px solid black;
     padding: 4px !important;
     font-size: 10px;
+  }
+  .where{
+    padding: 20px;
+  }
+  .detail__room{
+    padding: 20px;
   }
 }
 
