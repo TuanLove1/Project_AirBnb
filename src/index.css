@@ -784,6 +784,12 @@ body {
   .detail__room{
     padding: 20px;
   }
+  .img__city{
+    width: 60% !important;
+  }
+  .img__city img {
+    width: 60% !important;
+  }
 }
 
 .btn-76,

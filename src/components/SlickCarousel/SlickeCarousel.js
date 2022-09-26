@@ -29,7 +29,7 @@ export default class SlickCarousel extends Component {
     renderHtmlCity = () => {
         return this.props.data?.map((city, index) => {
             return <div className={`${styleReset['width-item']} ${styleReset['SlickCarousel_width-item__pckuA']}`}>
-                <div onClick={()=>{
+                <div onClick={() => {
                     this.props.handleOnChangeId(city);
                 }} key={index} className='all__city w-full flex items-center  cursor-pointer rounded-md hover:scale-105 hover:bg-gray-100 m-2 transition-all ease-linear'>
                     <div className='mr-2 w-full img__city flex justify-center flex-col items-center'>
@@ -56,14 +56,44 @@ export default class SlickCarousel extends Component {
             rows: 1,
             slidesPerRow: 1,
             nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
+            prevArrow: <SamplePrevArrow />,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        className: "center",
+                        centerMode: true,
+                        infinite: true,
+                        centerPadding: "0",
+                        slidesToShow: 4,
+                        speed: 500,
+                        rows: 1,
+                        slidesPerRow: 1,
+                    }
+                },
+                // {
+                //   breakpoint: 600,
+                //   settings: {
+                //     slidesToShow: 2,
+                //     slidesToScroll: 2,
+                //     initialSlide: 2
+                //   }
+                // },
+                // {
+                //   breakpoint: 480,
+                //   settings: {
+                //     slidesToShow: 4,
+                //     slidesToScroll: 1
+                //   }
+                // }
+            ]
         };
         return (
             <div className="col l-12 mf8-12 c-12">
                 <Slider {...settings}>
                     {this.renderHtmlCity()}
                 </Slider>
-                
+
             </div>
         );
     }

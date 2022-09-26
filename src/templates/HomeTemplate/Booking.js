@@ -42,17 +42,6 @@ export const Booking = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        for (let key in state) {
-            if (state[key] !== '') {
-                const MySwal = withReactContent(Swal)
-                MySwal.fire({
-                    title: <strong>Bạn phải nhập đầy đủ thông tin</strong>,
-                    html: <i>You clicked the button!</i>,
-                    icon: 'error'
-                })
-                return;
-            }
-        }
         if (localStorage.getItem('user')) {
             bookRoom(state)
         }
@@ -65,6 +54,18 @@ export const Booking = (props) => {
             })
             navigate('/login')
         }
+        for (let key in state) {
+            if (state[key] !== '') {
+                const MySwal = withReactContent(Swal)
+                MySwal.fire({
+                    title: <strong>Bạn phải nhập đầy đủ thông tin</strong>,
+                    html: <i>You clicked the button!</i>,
+                    icon: 'error'
+                })
+                return;
+            }
+        }
+        
     }
 
     return (
