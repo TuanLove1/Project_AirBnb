@@ -37,6 +37,11 @@
         <td>https://www.youtube.com/watch?v=XVt_8Yl7-eY</td>
         <td>https://project-air-bnb-rho.vercel.app/</td>
         </tr>
+         <td>Nguyễn Hà Nhật Hảo </td>
+        <td>https://github.com/TuanLove1/</td>
+        <td>https://www.youtube.com/watch?v=uF18s2xA4WU</td>
+        <td>https://project-air-bnb-rho.vercel.app/</td>
+        </tr>
       
 </table>
 <h2>
@@ -56,6 +61,8 @@
         </tr>
        <td>Nguyễn Hà Nhật Hảo </td>
         <td align="right">AdminPage</td>
-        <td align="right">Not working</td>
+        <td align="right">Done</td>
         </tr>
 </table>
+
+\*chú Thích : Tk admind : kha9x0159@gmail.com - password : 123456

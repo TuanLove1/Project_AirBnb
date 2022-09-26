@@ -1,0 +1,813 @@
+.admin
+{
+  display: flex;      
+}
+
+.sidebar
+{
+    width: 17%;
+    background: #386bfd;
+    border-top-right-radius: 40px;
+}
+
+.sidebar-nav
+{
+    padding-top: 20px;
+}
+
+.wrapper
+{
+    width: 83%;
+}
+
+.logo
+{
+    padding: 20px;
+    border-bottom: yellow;
+    font-size: 30px;
+    display: flex;
+}
+
+
+.logo h1
+{
+    margin-top: 10px;
+    margin-right: 10px;
+    color:#ff7977;
+}
+
+.title
+{
+    padding: 20px;
+}
+
+.title span
+{
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+}
+
+.title:hover
+{
+    background: white;
+    color: black;
+}
+
+.title:hover span {
+    color: black;
+}
+
+.container-lg
+{
+    max-width: 1500px;
+}
+
+.adminHeader 
+{
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.shadow-xl
+{
+    z-index: 1;
+}
+
+@media screen and (max-width: 1200px) 
+{
+    .admin {
+        display: flex; 
+    }
+
+    .sidebar {
+        width: 40% !important;
+        background: #386bfd;
+        border-top-right-radius: 40px;
+    }
+
+
+    .sidebar-nav
+    {
+        padding-top: 15px;
+    }
+
+    .wrapper
+    {
+        width: 80%;
+    }
+
+    .logo
+    {
+        padding: 20px;
+        padding-bottom: 40px;
+        display: flex;
+    }
+
+    .logo img 
+    {
+        width: 220px;
+        height: 100px !important;
+        padding-top: 25px;
+    }
+
+
+    .logo h1    
+    {
+        padding-top: 35px;
+        color:#ff7977;
+        font-size: 45px !important;
+    }
+
+    .title  
+    {
+        padding: 15px;
+    }
+
+    .title span
+    {
+        font-size: 17px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .title:hover
+    {
+        background: white;
+        color: black;
+    }
+
+    .title:hover span {
+        color: black;
+    }
+
+    .container-lg
+    {
+        max-width: 1450px !important;
+    }
+
+    .adminHeader 
+    {
+        padding: 15px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+    .table thead tr th
+    {
+        font-size: 15px !important;
+    }
+
+    .table tbody tr td
+    {
+        font-size: 15px !important;
+    }
+
+    .bg-primary
+    {
+        font-size: 15px;
+    }
+
+    .form-control
+    {
+        width: 100%;
+        font-size: 9px;
+
+    }
+
+    .btn
+    {
+        font-size: 9px;
+    }
+
+    .feature_location
+    {
+        width: 35%;
+    }
+
+    .feature_room
+    {
+        width: 35%;
+    }
+
+    .feature_user
+    {
+        width: 40%;
+    }
+
+    .feature_user .btn
+    {
+        margin-left: 17px !important;
+    }
+
+    .modal-content
+    {
+        width: 500px;
+    }
+
+    .modal-content .modal-header .modal-title
+    {
+        font-size: 12px;
+    }
+
+    .modal-content .modal-body .row .col-sm-3 .form-label
+    {
+        font-size: 11px !important;
+    }
+
+    .modal-content .modal-body .row .col-sm-9 .form-label
+    {
+        font-size: 12px !important;
+    }
+
+    .modal-content .modal-body .row 
+    {
+        margin-bottom : -2px !important;
+    }
+
+    .modal-content .g-3 .modal-header .modal-title
+    {
+        font-size: 12px !important;
+    }
+
+
+    .modal-content .modal-body h1
+    {
+        font-size: 20px !important;
+    }
+
+}
+
+@media screen and (max-width: 1024px) 
+{
+    .admin {
+        display: flex; 
+    }
+
+    .sidebar {
+        width: 20% !important;
+        background: #386bfd;
+        border-top-right-radius: 40px;
+    }
+
+
+    .sidebar-nav
+    {
+        padding-top: 20px;
+    }
+
+    .wrapper
+    {
+        width: 80% !important;
+    }
+
+    .logo
+    {
+        padding: 5px;
+        display: flex;
+    }
+
+    .logo img 
+    {
+        width: 60px !important;
+        height: 55px !important;
+        padding-top: 15px;
+    }
+
+
+    .logo h1    
+    {
+        padding-top: 10px;
+        color:#ff7977;
+        font-size: 25px !important;
+    }
+
+    .title  
+    {
+        padding: 15px;
+    }
+
+    .title span
+    {
+        font-size: 10px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .title:hover
+    {
+        background: white;
+        color: black;
+    }
+
+    .title:hover span {
+        color: black;
+    }
+
+    .containder-lg
+    {
+        max-width: 1200px;
+    }
+
+    .adminHeader 
+    {
+        padding: 15px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .table thead tr th
+    {
+        font-size: 8px !important;
+    }
+
+    .table tbody tr td
+    {
+        font-size: 8px !important;
+    }
+
+    .bg-primary
+    {
+        font-size: 15px;
+    }
+
+    .form-control
+    {
+        width: 100%;
+        font-size: 9px;
+
+    }
+
+    .btn
+    {
+        font-size: 9px;
+    }
+
+    .feature_location
+    {
+        width: 35%;
+    }
+
+    .feature_room
+    {
+        width: 35%;
+    }
+
+    .feature_user
+    {
+        width: 40%;
+    }
+
+    .feature_user .btn
+    {
+        margin-left: 17px !important;
+    }
+
+    .modal-content
+    {
+        width: 500px;
+    }
+
+    .modal-content .modal-header .modal-title
+    {
+        font-size: 12px;
+    }
+
+    .modal-content .modal-body .row .col-sm-3 .form-label
+    {
+        font-size: 11px !important;
+    }
+
+    .modal-content .modal-body .row .col-sm-9 .form-label
+    {
+        font-size: 12px !important;
+    }
+
+    .modal-content .modal-body .row 
+    {
+        margin-bottom : -2px !important;
+    }
+
+    .modal-content .g-3 .modal-header .modal-title
+    {
+        font-size: 12px !important;
+    }
+
+
+    .modal-content .modal-body h1
+    {
+        font-size: 20px !important;
+    }
+
+}
+
+@media screen and (max-width: 736px) 
+{
+    .admin {
+        display: flex; 
+    }
+
+    .sidebar {
+        width: 20% !important;
+        background: #386bfd;
+        border-top-right-radius: 40px;
+    }
+
+    .sidebar-nav
+    {
+        padding-top: 20px;
+    }
+    .sidebar-nav
+    {
+        padding-top: 5px;
+    }
+
+    .wrapper
+    {
+        width: 80% !important;
+    }
+
+    .logo
+    {
+        padding: 5px;
+        display: flex;
+    }
+
+    .logo img 
+    {
+        width: 35px;
+        height: 30px !important;
+        padding-top: 10px;
+    }
+
+
+    .logo h1
+    {
+        padding-top: 5px;
+        color:#ff7977;
+        font-size: 10px !important;
+    }
+
+    .title  
+    {
+        padding: 10px;
+    }
+
+    .title span
+    {
+        font-size: 8px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .title:hover
+    {
+        background: white;
+        color: black;
+    }
+
+    .title:hover span {
+        color: black;
+    }
+
+    
+    .adminHeader 
+    {
+        padding: 15px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .container-lg
+    {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .table thead tr th
+    {
+        font-size: 5px !important;
+    }
+
+    .table tbody tr td
+    {
+        font-size: 5px !important;
+    }
+
+    .card-body
+    {
+        padding: 0px;
+    }
+
+    .bg-primary
+    {
+        font-size: 7px;
+        height: 30px;
+    }
+
+    .form-control
+    {
+        width: 100%;
+        font-size: 9px;
+
+    }
+
+    .btn
+    {
+        font-size: 4px;
+        margin-left: 0 !important;
+    }
+    
+    .email_user
+    {
+        width: 10% !important;
+    }
+
+
+    .feature_user
+    {
+        width: 20%;
+        padding-left: 0 !important;
+    }
+
+    .feature_room
+    {
+        width: 45%;
+        padding-left: 10px !important;
+    }
+
+    .feature_location
+    {
+        width: 30%;
+        padding-left: 1px !important;
+    }
+
+    .modal-content .modal-header
+    {
+        height: 8%;
+    }
+
+    
+    .modal-content .modal-body
+    {
+        height: 50%;
+    }
+
+    .modal-content .modal-body h1
+    {
+       font-size: 10px !important;
+    }
+
+    .modal-content .modal-footer
+    {
+        height: 10%;   
+    }
+
+    .modal-content .modal-header .modal-title
+    {
+        font-size: 5px;
+    }
+
+    .modal-content .modal-body .row
+    {
+        display: flex;
+        flex-wrap: nowrap
+    }
+
+    .modal-content .modal-body .row .col-sm-3 .form-label
+    {
+        font-size: 7px !important;
+    }
+
+    .modal-content .modal-body .row .col-sm-9 .form-label
+    {
+        font-size: 7px !important;
+    }
+
+
+    .modal-content .g-3 .modal-header .modal-title
+    {
+        font-size: 12px !important;
+    }
+
+
+    .modal-content .modal-body h1
+    {
+        font-size: 20px !important;
+    }
+
+    .css-b62m3t-container
+    {
+        padding-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 667px) 
+{
+    .admin {
+        display: flex; 
+    }
+
+    .sidebar {
+        width: 20% !important;
+        background: #386bfd;
+        border-top-right-radius: 40px;
+    }
+
+    .sidebar-nav
+    {
+        padding-top: 20px;
+    }
+    .sidebar-nav
+    {
+        padding-top: 5px;
+    }
+
+    .wrapper
+    {
+        width: 80% !important;
+    }
+
+    .logo
+    {
+        padding: 5px;
+        display: flex;
+    }
+
+    .logo img 
+    {
+        width: 35px;
+        height: 30px !important;
+        padding-top: 10px;
+    }
+
+
+    .logo h1
+    {
+        padding-top: 5px;
+        color:#ff7977;
+        font-size: 10px !important;
+    }
+
+    .title  
+    {
+        padding: 10px;
+    }
+
+    .title span
+    {
+        font-size: 8px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .title:hover
+    {
+        background: white;
+        color: black;
+    }
+
+    .title:hover span {
+        color: black;
+    }
+
+    
+    .adminHeader 
+    {
+        padding: 15px;
+        margin: 5px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .container-lg
+    {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .table thead tr th
+    {
+        font-size: 5px !important;
+    }
+
+    .table tbody tr td
+    {
+        font-size: 5px !important;
+    }
+
+    .card-body
+    {
+        padding: 0px;
+    }
+
+    .bg-primary
+    {
+        font-size: 7px;
+        height: 30px;
+    }
+
+    .form-control
+    {
+        width: 100%;
+        font-size: 9px;
+
+    }
+
+    .btn
+    {
+        font-size: 4px;
+        margin-left: 0 !important;
+    }
+    
+    .email_user
+    {
+        width: 10% !important;
+    }
+
+
+    .feature_user
+    {
+        width: 20%;
+        padding-left: 0 !important;
+    }
+
+    .feature_room
+    {
+        width: 45%;
+        padding-left: 10px !important;
+    }
+
+    .feature_location
+    {
+        width: 30%;
+        padding-left: 1px !important;
+    }
+
+    .modal-content .modal-header
+    {
+        height: 8%;
+    }
+
+    
+    .modal-content .modal-body
+    {
+        height: 50%;
+    }
+
+    .modal-content .modal-body h1
+    {
+       font-size: 10px !important;
+    }
+
+    .modal-content .modal-footer
+    {
+        height: 10%;   
+    }
+
+    .modal-content .modal-header .modal-title
+    {
+        font-size: 5px;
+    }
+
+    .modal-content .modal-body .row
+    {
+        display: flex;
+        flex-wrap: nowrap
+    }
+
+    .modal-content .modal-body .row .col-sm-3 .form-label
+    {
+        font-size: 7px !important;
+    }
+
+    .modal-content .modal-body .row .col-sm-9 .form-label
+    {
+        font-size: 7px !important;
+    }
+
+
+    .modal-content .g-3 .modal-header .modal-title
+    {
+        font-size: 12px !important;
+    }
+
+
+    .modal-content .modal-body h1
+    {
+        font-size: 20px !important;
+    }
+
+    .css-b62m3t-container
+    {
+        padding-top: 10px;
+    }
+
+}    
