@@ -727,7 +727,7 @@ body {
     width: 100% !important;
   }
   .hover\:bg-gray-100:hover{
-    background-color: transparent !important;
+    background-color: none !important;
   }
   .slick-prev:before,
   .slick-next:before {

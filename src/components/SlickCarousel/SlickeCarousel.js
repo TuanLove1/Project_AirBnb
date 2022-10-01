@@ -31,7 +31,7 @@ export default class SlickCarousel extends Component {
             return <div className={`${styleReset['width-item']} ${styleReset['SlickCarousel_width-item__pckuA']}`}>
                 <div onClick={() => {
                     this.props.handleOnChangeId(city);
-                }} key={index} className='all__city w-full flex items-center  cursor-pointer rounded-md hover:scale-105 hover:bg-gray-100 m-2 transition-all ease-linear'>
+                }} key={index} className='all__city w-full flex items-center  cursor-pointer rounded-md hover:scale-105  m-2 transition-all ease-linear'>
                     <div className='mr-2 w-full img__city flex justify-center flex-col items-center'>
                         <img className='rounded w-full h-28' src={city.image} />
                         <h1 className="font-semibold mt-1">{city.province}</h1>

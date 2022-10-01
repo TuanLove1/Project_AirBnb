@@ -55,7 +55,7 @@ export const ListRoom = () => {
   return (
     <>
       {/* <Header /> */}
-  
+
       <div className='grid wide'>
         <div className='row'>
           <div className='col l-7 mf8-7 c-12'>
@@ -77,7 +77,7 @@ export const ListRoom = () => {
             </div>
           </div>
           <div className='col l-5 mf8-5 c-0'>
-            <MapBox />
+            <iframe style={{width:'100%',height:'100%'}} id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder={0} scrolling="no" marginHeight={0} marginWidth={0} /><br /><style dangerouslySetInnerHTML={{__html: ".mapouter{position:relative;text-align:right;height:500px;width:702px;}" }} /><style dangerouslySetInnerHTML={{__html: ".gmap_canvas {overflow:hidden;background:none!important;height:500px;width:702px;}" }} />
           </div>
         </div>
       </div>
