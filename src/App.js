@@ -16,6 +16,7 @@ import AdminTemplate from './templates/AdminTemplate';
 function App() {
   return (
     <BrowserRouter>
+   
     {/* <Loading/> */}
     <Routes>
       <Route path='/' element={<HomeTemplate />}>
