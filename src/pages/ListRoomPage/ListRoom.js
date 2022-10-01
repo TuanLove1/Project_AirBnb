@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fectDataRoom } from './reducer/actions';
 import { StarIcon } from '@heroicons/react/solid';
-import { MapBox } from '../../templates/HomeTemplate/MapBox';
 import { ClipLoader } from 'react-spinners';
 export const ListRoom = () => {
   const dispatch = useDispatch()
@@ -58,7 +57,7 @@ export const ListRoom = () => {
 
       <div className='grid wide'>
         <div className='row'>
-          <div className='col l-7 mf8-7 c-12'>
+          <div className='col l-7 mf8-12 c-12'>
             <div className='room__text'>
               <h1 className='font-bold text-xl'>Chỗ ở khu vực bạn đã chọn</h1>
               <div className='flex'>
@@ -76,7 +75,7 @@ export const ListRoom = () => {
               </div>
             </div>
           </div>
-          <div className='col l-5 mf8-5 c-0'>
+          <div className='col l-5 mf8-0 c-0'>
             <iframe style={{width:'100%',height:'100%'}} id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder={0} scrolling="no" marginHeight={0} marginWidth={0} /><br /><style dangerouslySetInnerHTML={{__html: ".mapouter{position:relative;text-align:right;height:500px;width:702px;}" }} /><style dangerouslySetInnerHTML={{__html: ".gmap_canvas {overflow:hidden;background:none!important;height:500px;width:702px;}" }} />
           </div>
         </div>
